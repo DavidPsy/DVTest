@@ -31,6 +31,8 @@
 		2D5067C617F17BF9000D4BAE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067C517F17BF9000D4BAE /* second.png */; };
 		2D5067C817F17BF9000D4BAE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067C717F17BF9000D4BAE /* second@2x.png */; };
 		2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */; };
+		2DEA72DD1803E85000D25A47 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72DC1803E85000D25A47 /* DataCenter.m */; };
+		2DEA72EA1804254700D25A47 /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72E91804254700D25A47 /* NetResponseVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,10 @@
 		2D5067C717F17BF9000D4BAE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		2D717CD517F7D4D100F651F4 /* ACTDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTDetailVC.h; sourceTree = "<group>"; };
 		2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTDetailVC.m; sourceTree = "<group>"; };
+		2DEA72DB1803E85000D25A47 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		2DEA72DC1803E85000D25A47 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		2DEA72E81804254700D25A47 /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
+		2DEA72E91804254700D25A47 /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 		2D0DE21B17F57D0600E3A1CE /* test */ = {
 			isa = PBXGroup;
 			children = (
+				2DEA72DA1803E83500D25A47 /* data */,
 				2D0DE21917F57AC100E3A1CE /* ACTStoryboard.storyboard */,
 				2D0DE21C17F57D2100E3A1CE /* RequestListVC.h */,
 				2D0DE21D17F57D2100E3A1CE /* RequestListVC.m */,
@@ -128,6 +135,8 @@
 				2D0DE22317F57D3900E3A1CE /* SettingVC.m */,
 				2D717CD517F7D4D100F651F4 /* ACTDetailVC.h */,
 				2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */,
+				2DEA72E81804254700D25A47 /* NetResponseVC.h */,
+				2DEA72E91804254700D25A47 /* NetResponseVC.m */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -200,6 +209,15 @@
 				2D5067B617F17BF9000D4BAE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2DEA72DA1803E83500D25A47 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				2DEA72DB1803E85000D25A47 /* DataCenter.h */,
+				2DEA72DC1803E85000D25A47 /* DataCenter.m */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +301,9 @@
 				2D4E459517F2D2F000F871FC /* Snake.m in Sources */,
 				2D36CEAF17F3D814002E3393 /* ThirdVC.m in Sources */,
 				2D36CEB217F3D827002E3393 /* FourthVC.m in Sources */,
+				2DEA72DD1803E85000D25A47 /* DataCenter.m in Sources */,
 				2D0DE22117F57D2E00E3A1CE /* ParamListVC.m in Sources */,
+				2DEA72EA1804254700D25A47 /* NetResponseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

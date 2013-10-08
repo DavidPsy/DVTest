@@ -7,12 +7,12 @@
 //
 
 #import "RequestListVC.h"
+#import "DataCenter.h"
+#import "ACTDetailVC.h"
 
-@interface RequestListVC ()
-
-@end
-
-@implementation RequestListVC
+@implementation RequestListVC {
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,11 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.listView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -36,16 +41,61 @@
 }
 
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return [DataCenter sharedDataCenter].requestList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"requestTableCell";
+    RequestTableCell *tmpCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if (tmpCell == nil) {
+        tmpCell = [[RequestTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    tmpCell.refRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
+    tmpCell.textLabel.text = tmpCell.refRequest.baseURL;
+    
+    return tmpCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    DVRequest *tmpRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    ACTDetailVC *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
+    
+    vc.outRequest = tmpRequest;
+    
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
+}
+
 #pragma mark - 
 
 - (IBAction)addRequest {
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"ACTStoryboard" bundle:nil];
-//    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
-//    [self.navigationController pushViewController:vc animated:YES];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
     
-    
-    [self.navigationController performSegueWithIdentifier:@"PageCreateRequest" sender:self];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
     
 }
+
+@end
+
+
+#pragma mark - tableview delegate
+
+
+
+
+#pragma mark - 
+
+@implementation RequestTableCell
+
 
 @end

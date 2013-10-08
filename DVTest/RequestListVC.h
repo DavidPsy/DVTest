@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataCenter.h"
 
-@interface RequestListVC : UIViewController
-
-//@property (strong) IBOutlet UITextView *textView;
-//
-
-
+@interface RequestListVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic,strong)IBOutlet UITableView *listView;
 - (IBAction)addRequest;
 
+
+@end
+
+
+
+@interface RequestTableCell : UITableViewCell
+@property (nonatomic,strong)DVRequest *refRequest;
 
 @end

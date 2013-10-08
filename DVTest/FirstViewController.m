@@ -20,22 +20,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapBackground)];
+    [self.view addGestureRecognizer:tap];
 }
 
 
 - (IBAction)sendTestURL:(id)sender {
-//    NSString * url = [NSString stringWithFormat:@"imeituan:%@",self.textView.text];
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
-    
-    
-    NSMutableArray * aa =[NSMutableArray array];
-    
-    LittleSnake * ss = [[LittleSnake alloc] init];
-    [ss initData];
-    
-    [aa addObject:ss];
-    
-    [aa removeObject: aa];
+    NSString * url = [NSString stringWithFormat:@"imeituan:%@",self.textView.text];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+}
+
+- (void)onTapBackground {
+    [self.textView resignFirstResponder];
 }
 
 @end
