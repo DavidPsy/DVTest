@@ -18,7 +18,10 @@
 
 - (IBAction)onBack;
 - (IBAction)onCreate;
+
 - (IBAction)onAdd;
+- (IBAction)onExecute;
+
 @end
 
 

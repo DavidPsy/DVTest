@@ -9,6 +9,7 @@
 #import "ACTDetailVC.h"
 
 #import "DataCenter.h"
+#import "NetResponseVC.h"
 
 @implementation ACTDetailVC {
     NSMutableArray *_paramArray;
@@ -104,7 +105,6 @@
         [[DataCenter sharedDataCenter].requestList addObject:newRequest];
     }
     
-    
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
@@ -115,6 +115,18 @@
     [_paramArray addObject:newParam];
     
     [self.paramsListView reloadData];
+}
+
+- (IBAction)onExecute {
+    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray];
+    if (!newRequest) {
+        return;
+    }
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    NetResponseVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
+    vc.outRequest = newRequest;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)onTapBackground {
