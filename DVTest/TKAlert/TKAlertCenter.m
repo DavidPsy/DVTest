@@ -66,7 +66,7 @@
 	[[UIColor colorWithWhite:0 alpha:0.8] set];
 	[UIView drawRoundRectangleInRect:rect withRadius:5];
     [[UIColor whiteColor] set];
-	[_text drawInRect:_messageRect withFont:[UIFont boldSystemFontOfSize:17] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	[_text drawInRect:_messageRect withFont:[UIFont boldSystemFontOfSize:17] lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentCenter];
     
 	CGRect r = CGRectZero;
 	r.origin.y = 15;
@@ -81,7 +81,7 @@
 	
 //	CGSize s = [_text sizeWithFont:[UIFont boldSystemFontOfSize:17] constrainedToSize:CGSizeMake(160,200) lineBreakMode:UILineBreakModeWordWrap];
 	
-    CGSize s = [_text sizeWithFont:[UIFont boldSystemFontOfSize:17] constrainedToSize:CGSizeMake(220,200) lineBreakMode:UILineBreakModeWordWrap];
+    CGSize s = [_text sizeWithFont:[UIFont boldSystemFontOfSize:17] constrainedToSize:CGSizeMake(220,200) lineBreakMode:NSLineBreakByWordWrapping];
     
 	float imageAdjustment = 0;
 	if (_image) {

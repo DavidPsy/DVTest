@@ -66,7 +66,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Add Request" id="6f7-h9-KbW">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="a0b-yq-vpT">
+                                        <barButtonItem key="leftBarButtonItem" id="a0b-yq-vpT">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nhF-yg-0Ut" userLabel="BtnCreate">
                                                 <rect key="frame" x="16" y="2" width="59" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,7 +82,7 @@
                                                 <action selector="onBack" destination="1zr-np-4kr" id="bRK-3J-gYc"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="OnD-Oa-CCh">
+                                        <barButtonItem key="rightBarButtonItem" id="OnD-Oa-CCh">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="COR-FJ-lOh" userLabel="BtnCreate">
                                                 <rect key="frame" x="245" y="2" width="59" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
