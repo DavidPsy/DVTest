@@ -8,15 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+@class DVOpenAppUnit;
 @interface DataCenter : NSObject
 @property (nonatomic,strong)NSMutableArray *requestList;
+@property (nonatomic,strong)NSMutableArray *openAppList;
 
 +(DataCenter*)sharedDataCenter;
+
+
+- (void)appendPush:(DVOpenAppUnit*)tmpPushUnit;
 
 @end
 
 
 #pragma mark - 数据单元
+
+
+@protocol DVDataBaseProtocol <NSObject>
+
+- (id)initWithDict:(NSDictionary*)cacheDict;
+- (NSDictionary*)convertToDict;
+
+@end
+
 
 @interface DVRequest : NSObject
 
@@ -29,6 +43,7 @@
 
 - (NSMutableArray*)paramsArray;
 
+
 @end
 
 
@@ -36,6 +51,18 @@
 
 @property (nonatomic,strong)NSString *key;
 @property (nonatomic,strong)NSString *value;
+
+@end
+
+
+@interface DVOpenAppUnit : NSObject<DVDataBaseProtocol>
+
+@property (nonatomic,copy)NSString *schema;
+@property (nonatomic,copy)NSString *content;
+@property (nonatomic,copy)NSString *tag;
+
+- (id)initWithSchema:(NSString*)schema content:(NSString*)content tag:(NSString*)tag;
+
 
 @end
 

@@ -126,7 +126,10 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     NetResponseVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
     vc.outRequest = newRequest;
-    [self.navigationController pushViewController:vc animated:YES];
+//    [self.navigationController pushViewController:vc animated:YES];
+    [self presentViewController:vc animated:YES completion:^{
+        
+    }];
 }
 
 - (void)onTapBackground {

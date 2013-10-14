@@ -7,6 +7,10 @@
 //
 
 #import "DataCenter.h"
+#import "NSDictionary+safe.h"
+
+#define kPathRequest @"kPathRequest"
+#define kPathPush @"kPathPush"
 
 @implementation DataCenter
 
@@ -23,12 +27,40 @@
     self = [super init];
     if (self) {
         _requestList = [NSMutableArray array];
+        _openAppList = [NSMutableArray array];
+        
+        //read from cache
+        NSArray *pushArray = [[NSUserDefaults standardUserDefaults]objectForKey:kPathPush];
+        for (NSDictionary *tmpDict in pushArray) {
+            DVOpenAppUnit *tmpPushUnit = [[DVOpenAppUnit alloc] initWithDict:tmpDict];
+            if (tmpPushUnit) {
+                [_openAppList addObject:tmpPushUnit];
+            }
+        }
+        
     }
     return self;
 }
 
-@end
+- (void)appendPush:(DVOpenAppUnit*)tmpPushUnit {
+    [_openAppList addObject:tmpPushUnit];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray *copyArray = [NSArray arrayWithArray:_openAppList];
+        
+        NSMutableArray *saveArray = [NSMutableArray array];
+        for (id<DVDataBaseProtocol> tmpData in copyArray) {
+            NSDictionary *dict = [tmpData convertToDict];
+            [saveArray addObject:dict];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setObject:saveArray forKey:kPathPush];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    });
+    
+}
 
+@end
 
 
 @implementation DVRequest
@@ -67,5 +99,38 @@
 
 @implementation DVParam
 
+
+@end
+
+@implementation DVOpenAppUnit
+
+- (id)initWithSchema:(NSString*)schema content:(NSString*)content tag:(NSString*)tag {
+    if (schema.length > 1 && content.length > 1 && tag.length > 1) {
+        self = [super init];
+        if (self) {
+            _schema = schema;
+            _content = content;
+            _tag = tag;
+        }
+        return self;
+    }
+    
+    return nil;
+}
+
+- (id)initWithDict:(NSDictionary*)cacheDict {
+    if (!cacheDict) {
+        return nil;
+    }
+    return [self initWithSchema:cacheDict[@"schema"] content:cacheDict[@"content"] tag:cacheDict[@"tag"]];
+}
+
+- (NSDictionary*)convertToDict {
+    NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
+    [tmpDict setSafeValue:_schema forKey:@"schema"];
+    [tmpDict setSafeValue:_content forKey:@"content"];
+    [tmpDict setSafeValue:_tag forKey:@"tag"];
+    return tmpDict;
+}
 
 @end

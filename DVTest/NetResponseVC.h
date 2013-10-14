@@ -12,4 +12,8 @@
 @interface NetResponseVC : UIViewController
 @property (nonatomic,strong)DVRequest *outRequest;
 @property (nonatomic,strong)IBOutlet UITextView *txtView;
+
+
+- (IBAction)onBack;
+
 @end
