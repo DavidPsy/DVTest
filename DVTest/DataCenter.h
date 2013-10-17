@@ -16,7 +16,6 @@
 
 +(DataCenter*)sharedDataCenter;
 
-
 - (void)appendPush:(DVOpenAppUnit*)tmpPushUnit;
 - (void)appendRequest:(DVRequest*)tmpRequest;
 
@@ -25,7 +24,6 @@
 
 #pragma mark - 数据单元
 
-
 @protocol DVDataBaseProtocol <NSObject>
 
 - (id)initWithDict:(NSDictionary*)cacheDict;
@@ -33,13 +31,13 @@
 
 @end
 
-
 @interface DVRequest : NSObject<DVDataBaseProtocol>
 
 @property (nonatomic,strong)NSString *baseURL;
 @property (nonatomic,strong)NSMutableDictionary *paramsMap;
-
 @property (nonatomic,strong)NSString *tag;
+
+@property (nonatomic,strong)NSString *result;
 
 - (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag;
 

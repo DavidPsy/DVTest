@@ -9,6 +9,8 @@
 #import "DataCenter.h"
 #import "NSDictionary+safe.h"
 
+#import <AFNetworking.h>
+
 #define kPathRequest @"kPathRequest"
 #define kPathPush @"kPathPush"
 
