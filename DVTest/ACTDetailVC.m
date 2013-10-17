@@ -93,12 +93,6 @@
 
 #pragma mark - 
 
-- (IBAction)onBack {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-}
-
 - (IBAction)onCreate {
     DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray];
     if (newRequest) {

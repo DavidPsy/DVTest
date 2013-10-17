@@ -2,3 +2,5 @@
 *.xcuserstate
 
 DVTest.xcodeproj/project.xcworkspace/xcuserdata/*
+
+DVTest.xcodeproj/xcuserdata/*

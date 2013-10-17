@@ -16,7 +16,6 @@
 
 @property (nonatomic,strong) DVRequest *outRequest;
 
-- (IBAction)onBack;
 - (IBAction)onCreate;
 
 - (IBAction)onAdd;

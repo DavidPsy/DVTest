@@ -79,10 +79,7 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
     
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
-    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
