@@ -33,7 +33,7 @@
 		2D5114101804F7C8002E96C4 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 2D51140F1804F7C8002E96C4 /* README */; };
 		2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */; };
 		2DCFBC8B180BCE8A00CF3F9B /* DVTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */; };
-		2DCFBC8F180BF0D200CF3F9B /* NSDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */; };
+		2DCFBC8F180BF0D200CF3F9B /* NSDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DCFBC93180BFEB500CF3F9B /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC92180BFEB500CF3F9B /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DEA72DD1803E85000D25A47 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72DC1803E85000D25A47 /* DataCenter.m */; };
 		2DEA72EA1804254700D25A47 /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72E91804254700D25A47 /* NetResponseVC.m */; };
