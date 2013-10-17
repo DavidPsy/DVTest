@@ -153,6 +153,11 @@
     return tmpDict;
 }
 
+- (void)run:(void (^)(NSString* result)) finished {
+    
+
+}
+
 @end
 
 @implementation DVParam

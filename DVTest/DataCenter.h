@@ -36,8 +36,9 @@
 @property (nonatomic,strong)NSString *baseURL;
 @property (nonatomic,strong)NSMutableDictionary *paramsMap;
 @property (nonatomic,strong)NSString *tag;
-
-@property (nonatomic,strong)NSString *result;
+//@property(copy) void(^TapBlock)();
+- (void)run:(void (^)(NSString* result)) finished;
+//typedef void(^TapBlock)(DVOpenAppUnit *tmpUnit);
 
 - (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag;
 
