@@ -154,7 +154,25 @@
 }
 
 - (void)run:(void (^)(NSString* result)) finished {
+//    http://music.baidu.com/search?key={query}
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObject:@"text/html"];
+//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     
+    [manager GET:@"http://music.baidu.com/search" parameters:[NSDictionary dictionaryWithObject:@"hi" forKey:@"key"] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSError *error = nil;
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
+        
+        NSLog([responseDictionary description]);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog([error description]);
+    }];
+    
+
 
 }
 

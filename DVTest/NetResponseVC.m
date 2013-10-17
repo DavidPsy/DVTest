@@ -29,7 +29,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    
+    [self.outRequest run:^(NSString *result) {
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning

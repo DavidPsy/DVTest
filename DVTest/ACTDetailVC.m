@@ -43,6 +43,7 @@
     }
     
     self.baseURLTextfield.text = _outRequest.baseURL;
+    self.tagTextfield.text = _outRequest.tag;
     _paramArray = [_outRequest paramsArray];
     
 }
