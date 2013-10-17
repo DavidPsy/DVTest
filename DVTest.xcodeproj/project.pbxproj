@@ -208,8 +208,6 @@
 				2D5067A717F17BF9000D4BAE /* Supporting Files */,
 				2D36CEB017F3D826002E3393 /* FourthVC.h */,
 				2D36CEB117F3D827002E3393 /* FourthVC.m */,
-				2DCFBC89180BCE8A00CF3F9B /* DVTools.h */,
-				2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */,
 			);
 			path = DVTest;
 			sourceTree = "<group>";
@@ -231,6 +229,8 @@
 		2DCFBC8C180BF0AD00CF3F9B /* category */ = {
 			isa = PBXGroup;
 			children = (
+				2DCFBC89180BCE8A00CF3F9B /* DVTools.h */,
+				2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */,
 				2DCFBC90180BFEB500CF3F9B /* TKAlert */,
 				2DCFBC8D180BF0D200CF3F9B /* NSDictionary+safe.h */,
 				2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */,

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @class DVOpenAppUnit;
+@class DVRequest;
 @interface DataCenter : NSObject
 @property (nonatomic,strong)NSMutableArray *requestList;
 @property (nonatomic,strong)NSMutableArray *openAppList;
@@ -17,6 +18,7 @@
 
 
 - (void)appendPush:(DVOpenAppUnit*)tmpPushUnit;
+- (void)appendRequest:(DVRequest*)tmpRequest;
 
 @end
 
@@ -32,16 +34,19 @@
 @end
 
 
-@interface DVRequest : NSObject
+@interface DVRequest : NSObject<DVDataBaseProtocol>
 
 @property (nonatomic,strong)NSString *baseURL;
 @property (nonatomic,strong)NSMutableDictionary *paramsMap;
 
 @property (nonatomic,strong)NSString *tag;
 
-- (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList;
+- (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag;
 
 - (NSMutableArray*)paramsArray;
+
+- (id)initWithDict:(NSDictionary*)cacheDict;
+- (NSDictionary*)convertToDict;
 
 
 @end

@@ -75,33 +75,21 @@
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"1");
-}
-
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"2");
-}
-
-
 #pragma mark textfield
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return NO;
 }
 
-
 #pragma mark - 
 
 - (IBAction)onCreate {
-    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray];
+    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray tag:self.tagTextfield.text];
     if (newRequest) {
         [[DataCenter sharedDataCenter].requestList addObject:newRequest];
     }
     
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)onAdd {
@@ -112,7 +100,7 @@
 }
 
 - (IBAction)onExecute {
-    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray];
+    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray tag:self.tagTextfield.text];
     if (!newRequest) {
         return;
     }
@@ -120,14 +108,11 @@
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     NetResponseVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
     vc.outRequest = newRequest;
-//    [self.navigationController pushViewController:vc animated:YES];
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)onTapBackground {
-    
+    [self setEditing:NO];
 }
 
 @end

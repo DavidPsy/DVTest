@@ -60,13 +60,30 @@
     
 }
 
+- (void)appendRequest:(DVRequest*)tmpRequest {
+    [_requestList addObject:tmpRequest];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSArray *copyArray = [NSArray arrayWithArray:_requestList];
+        
+        NSMutableArray *saveArray = [NSMutableArray array];
+        for (id<DVDataBaseProtocol> tmpData in copyArray) {
+            NSDictionary *dict = [tmpData convertToDict];
+            [saveArray addObject:dict];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setObject:saveArray forKey:kPathRequest];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    });
+}
+
 @end
 
 
 @implementation DVRequest
 
-- (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList {
-    if (!baseURL || !paramsList || paramsList.count==0) {
+- (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag{
+    if (!baseURL || !paramsList || paramsList.count==0 || tag.length < 1) {
         return nil;
     }
     
@@ -79,6 +96,7 @@
                 [_paramsMap setValue:tmpParam.value forKey:tmpParam.key];
             }
         }
+        _tag = tag;
     }
     return self;
 }
@@ -93,6 +111,36 @@
         [paramsArray addObject:tmpParam];
     }
     return paramsArray;
+}
+
+- (id)initWithDict:(NSDictionary*)cacheDict {
+    if (!cacheDict) {
+        return nil;
+    }
+    
+    NSString *baseURL = cacheDict[@"baseURL"];
+    NSDictionary *paramsDict = cacheDict[@"paramsMap"];
+    NSString *tag = cacheDict[@"tag"];
+    
+    
+    if (!baseURL || !paramsDict || tag.length < 1) {
+        return nil;
+    }
+    
+    self = [super init];
+    if (self) {
+        _baseURL = baseURL;
+        _paramsMap = [NSMutableDictionary dictionaryWithDictionary:paramsDict];
+        _tag = tag;
+    }
+    return self;
+}
+- (NSDictionary*)convertToDict {
+    NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
+    [tmpDict setSafeValue:_baseURL forKey:@"baseURL"];
+    [tmpDict setSafeValue:_paramsMap forKey:@"paramsMap"];
+    [tmpDict setSafeValue:_tag forKey:@"tag"];
+    return tmpDict;
 }
 
 @end
