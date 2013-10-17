@@ -38,6 +38,14 @@
             }
         }
         
+        NSArray *requestsArray = [[NSUserDefaults standardUserDefaults]objectForKey:kPathRequest];
+        for (NSDictionary *tmpDict in requestsArray) {
+            DVRequest *tmpRequest = [[DVRequest alloc] initWithDict:tmpDict];
+            if (tmpRequest) {
+                [_requestList addObject:tmpRequest];
+            }
+        }
+        
     }
     return self;
 }

@@ -28,8 +28,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    self.listView.edgesForExtendedLayout = UIRectEdgeNone;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,6 +57,7 @@
     
     tmpCell.refRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
     tmpCell.textLabel.text = tmpCell.refRequest.baseURL;
+    tmpCell.detailTextLabel.text = tmpCell.refRequest.tag;
     
     return tmpCell;
 }
@@ -68,27 +67,19 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     ACTDetailVC *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
-    
     vc.outRequest = tmpRequest;
-    
-    [self presentViewController:vc animated:YES completion:^{
-        
-    }];
+    [self.navigationController pushViewController:vc animated:YES];
 }
-
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0;
-}
-//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section;
 
 #pragma mark - 
 
 - (IBAction)addRequest {
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
+//    
+//    [self.navigationController pushViewController:vc animated:YES];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [self performSegueWithIdentifier:@"testSegue" sender:self];
 }
 
 @end

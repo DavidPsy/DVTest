@@ -86,7 +86,7 @@
 - (IBAction)onCreate {
     DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray tag:self.tagTextfield.text];
     if (newRequest) {
-        [[DataCenter sharedDataCenter].requestList addObject:newRequest];
+        [[DataCenter sharedDataCenter] appendRequest:newRequest];
     }
     
     [self.navigationController popViewControllerAnimated:YES];

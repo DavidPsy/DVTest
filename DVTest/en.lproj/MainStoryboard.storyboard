@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" contentMode="center" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ypv-0K-VGt">
-                                <rect key="frame" x="262" y="113" width="53" height="267"/>
+                                <rect key="frame" x="267" y="73" width="53" height="267"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.82352948189999997" green="0.91372555489999996" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WqO-Pq-rpa">
@@ -56,7 +56,7 @@
                                 </connections>
                             </collectionView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ut-0h-Ogo">
-                                <rect key="frame" x="0.0" y="113" width="242" height="291"/>
+                                <rect key="frame" x="0.0" y="73" width="242" height="291"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sop-iz-MZ7">
@@ -252,7 +252,7 @@
         <!--RequestList-->
         <scene sceneID="UqE-yX-TXJ">
             <objects>
-                <viewController id="dry-ZQ-Pwe" userLabel="RequestList" customClass="RequestListVC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dry-ZQ-Pwe" userLabel="RequestList" customClass="RequestListVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ux9-Wl-Fpo"/>
                         <viewControllerLayoutGuide type="bottom" id="P8e-0F-elK"/>
@@ -262,15 +262,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="z4A-eU-s5s">
-                                <rect key="frame" x="0.0" y="64" width="320" height="340"/>
+                                <rect key="frame" x="0.0" y="68" width="320" height="340"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Cqu-47-VEd">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="requestTableCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Cqu-47-VEd" customClass="RequestTableCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cqu-47-VEd" id="AOf-76-FRX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -302,6 +302,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="listView" destination="z4A-eU-s5s" id="kEh-wq-cd7"/>
+                        <segue destination="PPM-Zd-ORB" kind="push" identifier="testSegue" id="0Zi-rd-biO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3E0-7F-3bf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -311,7 +312,7 @@
         <!--DetailVC-->
         <scene sceneID="6gY-s7-9IE">
             <objects>
-                <viewController storyboardIdentifier="PageCreateRequest" id="PPM-Zd-ORB" customClass="ACTDetailVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageCreateRequest" automaticallyAdjustsScrollViewInsets="NO" id="PPM-Zd-ORB" customClass="ACTDetailVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="591-1d-CLN"/>
                         <viewControllerLayoutGuide type="bottom" id="1iO-H5-fbv"/>
@@ -321,7 +322,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="base URL, no param" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vte-3c-1qT" userLabel="urlTextfield">
-                                <rect key="frame" x="6" y="120" width="309" height="30"/>
+                                <rect key="frame" x="6" y="115" width="309" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
@@ -339,7 +340,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kO-ys-612" userLabel="BtnAddParam">
-                                <rect key="frame" x="6" y="80" width="96" height="32"/>
+                                <rect key="frame" x="6" y="75" width="96" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82352948189999997" green="0.91372555489999996" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -351,7 +352,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48k-t1-XOR" userLabel="BtnExecute">
-                                <rect key="frame" x="116" y="80" width="89" height="32"/>
+                                <rect key="frame" x="116" y="75" width="89" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82352948189999997" green="0.91372555489999996" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -363,7 +364,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APS-cV-iFp" userLabel="BtnExecute">
-                                <rect key="frame" x="227" y="80" width="88" height="32"/>
+                                <rect key="frame" x="227" y="75" width="88" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.82352948189999997" green="0.91372555489999996" blue="0.52549022440000004" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -482,7 +483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OnQ-6D-agr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1442" y="856"/>
+            <point key="canvasLocation" x="-1586" y="848"/>
         </scene>
         <!--Navigation Controller - App通信-->
         <scene sceneID="G7m-Bj-Got">
