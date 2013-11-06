@@ -14,7 +14,6 @@
 		2D0DE22417F57D3900E3A1CE /* SettingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0DE22317F57D3900E3A1CE /* SettingVC.m */; };
 		2D36CEAF17F3D814002E3393 /* ThirdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D36CEAE17F3D814002E3393 /* ThirdVC.m */; };
 		2D36CEB217F3D827002E3393 /* FourthVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D36CEB117F3D827002E3393 /* FourthVC.m */; };
-		2D4E459517F2D2F000F871FC /* Snake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E459417F2D2F000F871FC /* Snake.m */; };
 		2D5067A117F17BF9000D4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A017F17BF9000D4BAE /* UIKit.framework */; };
 		2D5067A317F17BF9000D4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A217F17BF9000D4BAE /* Foundation.framework */; };
 		2D5067A517F17BF9000D4BAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A417F17BF9000D4BAE /* CoreGraphics.framework */; };
@@ -25,20 +24,14 @@
 		2D5067B517F17BF9000D4BAE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067B417F17BF9000D4BAE /* Default@2x.png */; };
 		2D5067B717F17BF9000D4BAE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067B617F17BF9000D4BAE /* Default-568h@2x.png */; };
 		2D5067BA17F17BF9000D4BAE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067B817F17BF9000D4BAE /* MainStoryboard.storyboard */; };
-		2D5067BD17F17BF9000D4BAE /* OpenAppListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5067BC17F17BF9000D4BAE /* OpenAppListVC.m */; };
-		2D5067BF17F17BF9000D4BAE /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067BE17F17BF9000D4BAE /* first.png */; };
-		2D5067C117F17BF9000D4BAE /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067C017F17BF9000D4BAE /* first@2x.png */; };
-		2D5067C417F17BF9000D4BAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D5067C317F17BF9000D4BAE /* SecondViewController.m */; };
-		2D5067C617F17BF9000D4BAE /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067C517F17BF9000D4BAE /* second.png */; };
-		2D5067C817F17BF9000D4BAE /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067C717F17BF9000D4BAE /* second@2x.png */; };
 		2D5114101804F7C8002E96C4 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 2D51140F1804F7C8002E96C4 /* README */; };
 		2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */; };
 		2DCFBC8B180BCE8A00CF3F9B /* DVTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */; };
 		2DCFBC8F180BF0D200CF3F9B /* NSDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2DCFBC93180BFEB500CF3F9B /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFBC92180BFEB500CF3F9B /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2DEA72DD1803E85000D25A47 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72DC1803E85000D25A47 /* DataCenter.m */; };
 		2DEA72EA1804254700D25A47 /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA72E91804254700D25A47 /* NetResponseVC.m */; };
-		FE8D6DA218102BB60001AF86 /* DVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8D6DA118102BB60001AF86 /* DVNetwork.m */; };
+		FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13D4571829CCDD00EEE94E /* DVNetwork.m */; };
+		FE13D45C1829CCE800EEE94E /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13D45B1829CCE800EEE94E /* TKAlertCenter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +48,6 @@
 		2D36CEAE17F3D814002E3393 /* ThirdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdVC.m; sourceTree = "<group>"; };
 		2D36CEB017F3D826002E3393 /* FourthVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthVC.h; sourceTree = "<group>"; };
 		2D36CEB117F3D827002E3393 /* FourthVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthVC.m; sourceTree = "<group>"; };
-		2D4E459317F2D2F000F871FC /* Snake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Snake.h; sourceTree = "<group>"; };
-		2D4E459417F2D2F000F871FC /* Snake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Snake.m; sourceTree = "<group>"; };
 		2D50679D17F17BF9000D4BAE /* DVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5067A017F17BF9000D4BAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D5067A217F17BF9000D4BAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,14 +62,6 @@
 		2D5067B417F17BF9000D4BAE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2D5067B617F17BF9000D4BAE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2D5067B917F17BF9000D4BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		2D5067BB17F17BF9000D4BAE /* OpenAppListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenAppListVC.h; sourceTree = "<group>"; };
-		2D5067BC17F17BF9000D4BAE /* OpenAppListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenAppListVC.m; sourceTree = "<group>"; };
-		2D5067BE17F17BF9000D4BAE /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		2D5067C017F17BF9000D4BAE /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		2D5067C217F17BF9000D4BAE /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		2D5067C317F17BF9000D4BAE /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		2D5067C517F17BF9000D4BAE /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		2D5067C717F17BF9000D4BAE /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		2D51140F1804F7C8002E96C4 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2D717CD517F7D4D100F651F4 /* ACTDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTDetailVC.h; sourceTree = "<group>"; };
 		2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTDetailVC.m; sourceTree = "<group>"; };
@@ -86,15 +69,15 @@
 		2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTools.m; sourceTree = "<group>"; };
 		2DCFBC8D180BF0D200CF3F9B /* NSDictionary+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+safe.h"; sourceTree = "<group>"; };
 		2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+safe.m"; sourceTree = "<group>"; };
-		2DCFBC91180BFEB500CF3F9B /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
-		2DCFBC92180BFEB500CF3F9B /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
 		2DEA72DB1803E85000D25A47 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
 		2DEA72DC1803E85000D25A47 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		2DEA72E81804254700D25A47 /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
 		2DEA72E91804254700D25A47 /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
 		91A3FA80CE734F4C9A3710EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE8D6DA018102BB60001AF86 /* DVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNetwork.h; sourceTree = "<group>"; };
-		FE8D6DA118102BB60001AF86 /* DVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVNetwork.m; sourceTree = "<group>"; };
+		FE13D4561829CCDD00EEE94E /* DVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNetwork.h; sourceTree = "<group>"; };
+		FE13D4571829CCDD00EEE94E /* DVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVNetwork.m; sourceTree = "<group>"; };
+		FE13D45A1829CCE800EEE94E /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
+		FE13D45B1829CCE800EEE94E /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,26 +95,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D0DE21617F55CA900E3A1CE /* OpenApp */ = {
-			isa = PBXGroup;
-			children = (
-				2D5067BB17F17BF9000D4BAE /* OpenAppListVC.h */,
-				2D5067BC17F17BF9000D4BAE /* OpenAppListVC.m */,
-			);
-			name = OpenApp;
-			sourceTree = "<group>";
-		};
-		2D0DE21717F55CD500E3A1CE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2D5067BE17F17BF9000D4BAE /* first.png */,
-				2D5067C017F17BF9000D4BAE /* first@2x.png */,
-				2D5067C517F17BF9000D4BAE /* second.png */,
-				2D5067C717F17BF9000D4BAE /* second@2x.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		2D0DE21817F55CF000E3A1CE /* Activity */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,21 +124,12 @@
 			name = test;
 			sourceTree = "<group>";
 		};
-		2D4E459217F2D2D800F871FC /* Snake */ = {
-			isa = PBXGroup;
-			children = (
-				2D5067C217F17BF9000D4BAE /* SecondViewController.h */,
-				2D5067C317F17BF9000D4BAE /* SecondViewController.m */,
-				2D4E459317F2D2F000F871FC /* Snake.h */,
-				2D4E459417F2D2F000F871FC /* Snake.m */,
-			);
-			name = Snake;
-			sourceTree = "<group>";
-		};
 		2D50679417F17BF9000D4BAE = {
 			isa = PBXGroup;
 			children = (
 				2D51140F1804F7C8002E96C4 /* README */,
+				FE13D4551829CC7700EEE94E /* ThirdParty */,
+				FE13D4511829CC6D00EEE94E /* Core */,
 				2D5067A617F17BF9000D4BAE /* DVTest */,
 				2D50679F17F17BF9000D4BAE /* Frameworks */,
 				2D50679E17F17BF9000D4BAE /* Products */,
@@ -205,13 +159,9 @@
 		2D5067A617F17BF9000D4BAE /* DVTest */ = {
 			isa = PBXGroup;
 			children = (
-				FE8D6D9F18102BA00001AF86 /* Network */,
 				2D1D4C2218095CFF0050B06D /* DVTest.entitlements */,
 				2D0DE21B17F57D0600E3A1CE /* test */,
 				2D0DE21817F55CF000E3A1CE /* Activity */,
-				2D0DE21717F55CD500E3A1CE /* Resources */,
-				2D0DE21617F55CA900E3A1CE /* OpenApp */,
-				2D4E459217F2D2D800F871FC /* Snake */,
 				2D5067AF17F17BF9000D4BAE /* AppDelegate.h */,
 				2D5067B017F17BF9000D4BAE /* AppDelegate.m */,
 				2D5067B817F17BF9000D4BAE /* MainStoryboard.storyboard */,
@@ -241,20 +191,10 @@
 			children = (
 				2DCFBC89180BCE8A00CF3F9B /* DVTools.h */,
 				2DCFBC8A180BCE8A00CF3F9B /* DVTools.m */,
-				2DCFBC90180BFEB500CF3F9B /* TKAlert */,
 				2DCFBC8D180BF0D200CF3F9B /* NSDictionary+safe.h */,
 				2DCFBC8E180BF0D200CF3F9B /* NSDictionary+safe.m */,
 			);
 			name = category;
-			sourceTree = "<group>";
-		};
-		2DCFBC90180BFEB500CF3F9B /* TKAlert */ = {
-			isa = PBXGroup;
-			children = (
-				2DCFBC91180BFEB500CF3F9B /* TKAlertCenter.h */,
-				2DCFBC92180BFEB500CF3F9B /* TKAlertCenter.m */,
-			);
-			path = TKAlert;
 			sourceTree = "<group>";
 		};
 		2DEA72DA1803E83500D25A47 /* data */ = {
@@ -266,13 +206,54 @@
 			name = data;
 			sourceTree = "<group>";
 		};
-		FE8D6D9F18102BA00001AF86 /* Network */ = {
+		FE13D4511829CC6D00EEE94E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				FE8D6DA018102BB60001AF86 /* DVNetwork.h */,
-				FE8D6DA118102BB60001AF86 /* DVNetwork.m */,
+				FE13D4521829CC6D00EEE94E /* Cache */,
+				FE13D4531829CC6D00EEE94E /* DVUI */,
+				FE13D4541829CC6D00EEE94E /* Network */,
 			);
-			name = Network;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FE13D4521829CC6D00EEE94E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		FE13D4531829CC6D00EEE94E /* DVUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DVUI;
+			sourceTree = "<group>";
+		};
+		FE13D4541829CC6D00EEE94E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FE13D4561829CCDD00EEE94E /* DVNetwork.h */,
+				FE13D4571829CCDD00EEE94E /* DVNetwork.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FE13D4551829CC7700EEE94E /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				FE13D4591829CCE800EEE94E /* TKAlert */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		FE13D4591829CCE800EEE94E /* TKAlert */ = {
+			isa = PBXGroup;
+			children = (
+				FE13D45A1829CCE800EEE94E /* TKAlertCenter.h */,
+				FE13D45B1829CCE800EEE94E /* TKAlertCenter.m */,
+			);
+			path = TKAlert;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,11 +328,7 @@
 				2D5067B517F17BF9000D4BAE /* Default@2x.png in Resources */,
 				2D5067B717F17BF9000D4BAE /* Default-568h@2x.png in Resources */,
 				2D5067BA17F17BF9000D4BAE /* MainStoryboard.storyboard in Resources */,
-				2D5067BF17F17BF9000D4BAE /* first.png in Resources */,
 				2D0DE21A17F57AC100E3A1CE /* ACTStoryboard.storyboard in Resources */,
-				2D5067C117F17BF9000D4BAE /* first@2x.png in Resources */,
-				2D5067C617F17BF9000D4BAE /* second.png in Resources */,
-				2D5067C817F17BF9000D4BAE /* second@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,20 +374,17 @@
 			files = (
 				2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */,
 				2DCFBC8B180BCE8A00CF3F9B /* DVTools.m in Sources */,
-				2DCFBC93180BFEB500CF3F9B /* TKAlertCenter.m in Sources */,
 				2D5067AD17F17BF9000D4BAE /* main.m in Sources */,
 				2D5067B117F17BF9000D4BAE /* AppDelegate.m in Sources */,
-				2D5067BD17F17BF9000D4BAE /* OpenAppListVC.m in Sources */,
-				2D5067C417F17BF9000D4BAE /* SecondViewController.m in Sources */,
 				2D0DE21E17F57D2100E3A1CE /* RequestListVC.m in Sources */,
+				FE13D45C1829CCE800EEE94E /* TKAlertCenter.m in Sources */,
 				2D0DE22417F57D3900E3A1CE /* SettingVC.m in Sources */,
-				2D4E459517F2D2F000F871FC /* Snake.m in Sources */,
 				2D36CEAF17F3D814002E3393 /* ThirdVC.m in Sources */,
+				FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */,
 				2D36CEB217F3D827002E3393 /* FourthVC.m in Sources */,
 				2DEA72DD1803E85000D25A47 /* DataCenter.m in Sources */,
 				2D0DE22117F57D2E00E3A1CE /* ParamListVC.m in Sources */,
 				2DCFBC8F180BF0D200CF3F9B /* NSDictionary+safe.m in Sources */,
-				FE8D6DA218102BB60001AF86 /* DVNetwork.m in Sources */,
 				2DEA72EA1804254700D25A47 /* NetResponseVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -166,10 +166,10 @@
         NSError *error = nil;
         NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
         
-        NSLog([responseDictionary description]);
+        NSLog(@"%@",[responseDictionary description]);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog([error description]);
+//        NSLog([error description]);
     }];
     
 
