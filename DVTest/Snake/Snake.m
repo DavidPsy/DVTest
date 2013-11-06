@@ -16,15 +16,8 @@
 
 - (void)dealloc {
     self.names = nil;
-}
-
-@end
-
-
-@implementation LittleSnake
-
-- (void)dealloc {
-    self.names = nil;
+    
+    
 }
 
 @end
