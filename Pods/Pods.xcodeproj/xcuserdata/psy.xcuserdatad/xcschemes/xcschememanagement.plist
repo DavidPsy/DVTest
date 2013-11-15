@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Appirater.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Appirater.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>AFA2E692CC2F4DF099A151E2</key>
+		<key>29F07C91D09B4252AB5C4960</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FBD59CF9D2E84B9D94EA82E0</key>
+		<key>317D2E06E48A4CD78A8054D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>406943774CDB40F98300C5E6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D0D9180C3474094AEF16093</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95F38C1B688947B6BCB66B3B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9961A7F404B5452AB7FF1A81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
