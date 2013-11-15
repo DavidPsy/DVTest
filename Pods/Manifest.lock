@@ -19,7 +19,6 @@ PODS:
   - AFNetworking/Serialization (2.0.2)
   - AFNetworking/UIKit (2.0.2):
     - AFNetworking/NSURLConnection
-  - Appirater (2.0.2)
   - ReactiveCocoa (2.1.7):
     - ReactiveCocoa/Core
     - ReactiveCocoa/no-arc
@@ -32,13 +31,11 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
-  - Appirater (~> 2.0.2)
   - ReactiveCocoa (~> 2.1.3)
   - SDWebImage (~> 3.5)
 
 SPEC CHECKSUMS:
   AFNetworking: 22de50ae71ab1c4859773f61068d6fcd1d8f9a4d
-  Appirater: 32fb9089615b5e542c7ad7b5749741a8aed55290
   ReactiveCocoa: 1117f7968c8667d2ca00b5aa47156fabcb56af75
   SDWebImage: f1a72472f8a2d54445f1fedafe2090593d9caf7f
 
