@@ -13,9 +13,6 @@
 		2D066A361834CEC000C2AC90 /* DVTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A341834CEC000C2AC90 /* DVTools.m */; };
 		2D066A3D1834CED900C2AC90 /* SnakeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A3A1834CED900C2AC90 /* SnakeVC.m */; };
 		2D066A431834D2E400C2AC90 /* NSDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A421834D2E400C2AC90 /* NSDictionary+safe.m */; };
-		2D066A4B1834DA2A00C2AC90 /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A461834DA2A00C2AC90 /* NetResponseVC.m */; };
-		2D066A4C1834DA2A00C2AC90 /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A481834DA2A00C2AC90 /* ParamListVC.m */; };
-		2D066A4D1834DA2A00C2AC90 /* RequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A4A1834DA2A00C2AC90 /* RequestListVC.m */; };
 		2D2A9BFC182A37FE002E9952 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A9BFB182A37FE002E9952 /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D5067A117F17BF9000D4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A017F17BF9000D4BAE /* UIKit.framework */; };
 		2D5067A317F17BF9000D4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A217F17BF9000D4BAE /* Foundation.framework */; };
@@ -28,7 +25,6 @@
 		2D5067B717F17BF9000D4BAE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067B617F17BF9000D4BAE /* Default-568h@2x.png */; };
 		2D5067BA17F17BF9000D4BAE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5067B817F17BF9000D4BAE /* MainStoryboard.storyboard */; };
 		2D5114101804F7C8002E96C4 /* README in Resources */ = {isa = PBXBuildFile; fileRef = 2D51140F1804F7C8002E96C4 /* README */; };
-		2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */; };
 		2D90974218360609004676EC /* DVLocationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90974118360609004676EC /* DVLocationCenter.m */; };
 		2D90974918360696004676EC /* WGS2Mars.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90974818360696004676EC /* WGS2Mars.m */; };
 		2D90975018362267004676EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D90974F18362267004676EC /* XCTest.framework */; };
@@ -38,6 +34,10 @@
 		2D90975A18362267004676EC /* DVTest_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90975918362267004676EC /* DVTest_Tests.m */; };
 		2DFAA3201832189D00D88496 /* JumpsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAA31F1832189D00D88496 /* JumpsVC.m */; };
 		FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13D4571829CCDD00EEE94E /* DVNetwork.m */; };
+		FE285FD718367DFD00A67C7D /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* ACTDetailVC.m */; };
+		FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* NetResponseVC.m */; };
+		FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD418367DFD00A67C7D /* ParamListVC.m */; };
+		FE285FDA18367DFD00A67C7D /* RequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* RequestListVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,12 +62,6 @@
 		2D066A3A1834CED900C2AC90 /* SnakeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnakeVC.m; sourceTree = "<group>"; };
 		2D066A411834D2E400C2AC90 /* NSDictionary+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+safe.h"; sourceTree = "<group>"; };
 		2D066A421834D2E400C2AC90 /* NSDictionary+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+safe.m"; sourceTree = "<group>"; };
-		2D066A451834DA2A00C2AC90 /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
-		2D066A461834DA2A00C2AC90 /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
-		2D066A471834DA2A00C2AC90 /* ParamListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamListVC.h; sourceTree = "<group>"; };
-		2D066A481834DA2A00C2AC90 /* ParamListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamListVC.m; sourceTree = "<group>"; };
-		2D066A491834DA2A00C2AC90 /* RequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestListVC.h; sourceTree = "<group>"; };
-		2D066A4A1834DA2A00C2AC90 /* RequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestListVC.m; sourceTree = "<group>"; };
 		2D2A9BFA182A37FE002E9952 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
 		2D2A9BFB182A37FE002E9952 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
 		2D50679D17F17BF9000D4BAE /* DVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +79,6 @@
 		2D5067B617F17BF9000D4BAE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2D5067B917F17BF9000D4BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		2D51140F1804F7C8002E96C4 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
-		2D717CD517F7D4D100F651F4 /* ACTDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTDetailVC.h; sourceTree = "<group>"; };
-		2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTDetailVC.m; sourceTree = "<group>"; };
 		2D90974018360609004676EC /* DVLocationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVLocationCenter.h; sourceTree = "<group>"; };
 		2D90974118360609004676EC /* DVLocationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVLocationCenter.m; sourceTree = "<group>"; };
 		2D90974718360696004676EC /* WGS2Mars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WGS2Mars.h; sourceTree = "<group>"; };
@@ -102,6 +94,14 @@
 		91A3FA80CE734F4C9A3710EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE13D4561829CCDD00EEE94E /* DVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNetwork.h; sourceTree = "<group>"; };
 		FE13D4571829CCDD00EEE94E /* DVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVNetwork.m; sourceTree = "<group>"; };
+		FE285FCF18367DFD00A67C7D /* ACTDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTDetailVC.h; sourceTree = "<group>"; };
+		FE285FD018367DFD00A67C7D /* ACTDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTDetailVC.m; sourceTree = "<group>"; };
+		FE285FD118367DFD00A67C7D /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
+		FE285FD218367DFD00A67C7D /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
+		FE285FD318367DFD00A67C7D /* ParamListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamListVC.h; sourceTree = "<group>"; };
+		FE285FD418367DFD00A67C7D /* ParamListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamListVC.m; sourceTree = "<group>"; };
+		FE285FD518367DFD00A67C7D /* RequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestListVC.h; sourceTree = "<group>"; };
+		FE285FD618367DFD00A67C7D /* RequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestListVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,29 +181,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		2D066A441834DA2A00C2AC90 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				2D066A451834DA2A00C2AC90 /* NetResponseVC.h */,
-				2D066A461834DA2A00C2AC90 /* NetResponseVC.m */,
-				2D066A471834DA2A00C2AC90 /* ParamListVC.h */,
-				2D066A481834DA2A00C2AC90 /* ParamListVC.m */,
-				2D066A491834DA2A00C2AC90 /* RequestListVC.h */,
-				2D066A4A1834DA2A00C2AC90 /* RequestListVC.m */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		2D0DE21B17F57D0600E3A1CE /* test */ = {
-			isa = PBXGroup;
-			children = (
-				2DCFBC8C180BF0AD00CF3F9B /* category */,
-				2D717CD517F7D4D100F651F4 /* ACTDetailVC.h */,
-				2D717CD617F7D4D100F651F4 /* ACTDetailVC.m */,
-			);
-			name = test;
-			sourceTree = "<group>";
-		};
 		2D50679417F17BF9000D4BAE = {
 			isa = PBXGroup;
 			children = (
@@ -246,9 +223,8 @@
 				2D066A381834CED900C2AC90 /* Snake */,
 				2D066A2C1834CA8200C2AC90 /* Home */,
 				2D066A371834CED000C2AC90 /* Push */,
+				FE285FCE18367DFD00A67C7D /* Rest */,
 				2DFAA31D1832189D00D88496 /* Jump */,
-				2D066A441834DA2A00C2AC90 /* API */,
-				2D0DE21B17F57D0600E3A1CE /* test */,
 				2D5067AF17F17BF9000D4BAE /* AppDelegate.h */,
 				2D5067B017F17BF9000D4BAE /* AppDelegate.m */,
 				2D5067B817F17BF9000D4BAE /* MainStoryboard.storyboard */,
@@ -301,13 +277,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2DCFBC8C180BF0AD00CF3F9B /* category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = category;
-			sourceTree = "<group>";
-		};
 		2DFAA31D1832189D00D88496 /* Jump */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +321,21 @@
 				2D2A9BFB182A37FE002E9952 /* TKAlertCenter.m */,
 			);
 			path = TKAlert;
+			sourceTree = "<group>";
+		};
+		FE285FCE18367DFD00A67C7D /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				FE285FCF18367DFD00A67C7D /* ACTDetailVC.h */,
+				FE285FD018367DFD00A67C7D /* ACTDetailVC.m */,
+				FE285FD118367DFD00A67C7D /* NetResponseVC.h */,
+				FE285FD218367DFD00A67C7D /* NetResponseVC.m */,
+				FE285FD318367DFD00A67C7D /* ParamListVC.h */,
+				FE285FD418367DFD00A67C7D /* ParamListVC.m */,
+				FE285FD518367DFD00A67C7D /* RequestListVC.h */,
+				FE285FD618367DFD00A67C7D /* RequestListVC.m */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,19 +484,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D066A3D1834CED900C2AC90 /* SnakeVC.m in Sources */,
-				2D066A4C1834DA2A00C2AC90 /* ParamListVC.m in Sources */,
-				2D066A4B1834DA2A00C2AC90 /* NetResponseVC.m in Sources */,
-				2D717CD717F7D4D100F651F4 /* ACTDetailVC.m in Sources */,
+				FE285FD718367DFD00A67C7D /* ACTDetailVC.m in Sources */,
 				2D90974218360609004676EC /* DVLocationCenter.m in Sources */,
 				2DFAA3201832189D00D88496 /* JumpsVC.m in Sources */,
 				2D066A351834CEC000C2AC90 /* DataCenter.m in Sources */,
 				2D5067AD17F17BF9000D4BAE /* main.m in Sources */,
 				2D5067B117F17BF9000D4BAE /* AppDelegate.m in Sources */,
-				2D066A4D1834DA2A00C2AC90 /* RequestListVC.m in Sources */,
 				2D066A361834CEC000C2AC90 /* DVTools.m in Sources */,
+				FE285FDA18367DFD00A67C7D /* RequestListVC.m in Sources */,
 				2D90974918360696004676EC /* WGS2Mars.m in Sources */,
 				2D066A2F1834CB2600C2AC90 /* HomeVC.m in Sources */,
 				FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */,
+				FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */,
+				FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */,
 				2D2A9BFC182A37FE002E9952 /* TKAlertCenter.m in Sources */,
 				2D066A431834D2E400C2AC90 /* NSDictionary+safe.m in Sources */,
 			);
@@ -739,6 +723,7 @@
 				2D90976018362267004676EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

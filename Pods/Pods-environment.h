@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 0
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 2
 
+// NSTimer-Blocks
+#define COCOAPODS_POD_AVAILABLE_NSTimer_Blocks
+#define COCOAPODS_VERSION_MAJOR_NSTimer_Blocks 0
+#define COCOAPODS_VERSION_MINOR_NSTimer_Blocks 0
+#define COCOAPODS_VERSION_PATCH_NSTimer_Blocks 1
+
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
