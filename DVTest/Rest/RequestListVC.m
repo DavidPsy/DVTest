@@ -83,11 +83,6 @@
 #pragma mark - 
 
 - (IBAction)addRequest {
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-//    UIViewController *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
-//    
-//    [self.navigationController pushViewController:vc animated:YES];
-    
     [self performSegueWithIdentifier:@"testSegue" sender:self];
 }
 
@@ -95,8 +90,6 @@
 
 
 #pragma mark - tableview delegate
-
-
 
 
 #pragma mark - 

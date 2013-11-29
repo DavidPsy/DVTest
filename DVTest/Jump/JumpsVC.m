@@ -10,8 +10,6 @@
 #import "DVTools.h"
 #import "DataCenter.h"
 
-#import <ReactiveCocoa.h>
-
 @implementation JumpsVC
 
 - (void)viewDidLoad

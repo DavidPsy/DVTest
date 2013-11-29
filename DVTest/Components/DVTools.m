@@ -8,7 +8,4 @@
 
 #import "DVTools.h"
 
-@implementation DVTools
 
-
-@end
