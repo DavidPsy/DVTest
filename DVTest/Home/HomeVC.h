@@ -6,8 +6,8 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DVBaseVC.h"
 
-@interface HomeVC : UIViewController
+@interface HomeVC : DVBaseVC
 
 @end

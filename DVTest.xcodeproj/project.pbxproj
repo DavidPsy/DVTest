@@ -38,6 +38,9 @@
 		FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* NetResponseVC.m */; };
 		FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD418367DFD00A67C7D /* ParamListVC.m */; };
 		FE285FDA18367DFD00A67C7D /* RequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* RequestListVC.m */; };
+		FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7955DD1847CA0100BB4822 /* DVBaseVC.m */; };
+		FEF59DE718430F23007CA28D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF59DE618430F23007CA28D /* CoreLocation.framework */; };
+		FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */ = {isa = PBXBuildFile; fileRef = FEF59DE81844BDA3007CA28D /* DEVSteps */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,10 @@
 		FE285FD418367DFD00A67C7D /* ParamListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamListVC.m; sourceTree = "<group>"; };
 		FE285FD518367DFD00A67C7D /* RequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestListVC.h; sourceTree = "<group>"; };
 		FE285FD618367DFD00A67C7D /* RequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestListVC.m; sourceTree = "<group>"; };
+		FE7955DC1847CA0100BB4822 /* DVBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVBaseVC.h; sourceTree = "<group>"; };
+		FE7955DD1847CA0100BB4822 /* DVBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVBaseVC.m; sourceTree = "<group>"; };
+		FEF59DE618430F23007CA28D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FEF59DE81844BDA3007CA28D /* DEVSteps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DEVSteps; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF59DE718430F23007CA28D /* CoreLocation.framework in Frameworks */,
 				2D5067A117F17BF9000D4BAE /* UIKit.framework in Frameworks */,
 				2D5067A317F17BF9000D4BAE /* Foundation.framework in Frameworks */,
 				2D5067A517F17BF9000D4BAE /* CoreGraphics.framework in Frameworks */,
@@ -145,6 +153,8 @@
 				2D066A321834CEC000C2AC90 /* DataCenter.m */,
 				2D066A331834CEC000C2AC90 /* DVTools.h */,
 				2D066A341834CEC000C2AC90 /* DVTools.m */,
+				FE7955DC1847CA0100BB4822 /* DVBaseVC.h */,
+				FE7955DD1847CA0100BB4822 /* DVBaseVC.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -184,6 +194,7 @@
 		2D50679417F17BF9000D4BAE = {
 			isa = PBXGroup;
 			children = (
+				FEF59DE81844BDA3007CA28D /* DEVSteps */,
 				2D51140F1804F7C8002E96C4 /* README */,
 				FE13D4551829CC7700EEE94E /* ThirdParty */,
 				FE13D4511829CC6D00EEE94E /* Core */,
@@ -207,6 +218,7 @@
 		2D50679F17F17BF9000D4BAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEF59DE618430F23007CA28D /* CoreLocation.framework */,
 				2D5067A017F17BF9000D4BAE /* UIKit.framework */,
 				2D5067A217F17BF9000D4BAE /* Foundation.framework */,
 				2D5067A417F17BF9000D4BAE /* CoreGraphics.framework */,
@@ -429,6 +441,7 @@
 				2D5067AB17F17BF9000D4BAE /* InfoPlist.strings in Resources */,
 				2D5114101804F7C8002E96C4 /* README in Resources */,
 				2D5067B317F17BF9000D4BAE /* Default.png in Resources */,
+				FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */,
 				2D5067B517F17BF9000D4BAE /* Default@2x.png in Resources */,
 				2D5067B717F17BF9000D4BAE /* Default-568h@2x.png in Resources */,
 				2D5067BA17F17BF9000D4BAE /* MainStoryboard.storyboard in Resources */,
@@ -493,6 +506,7 @@
 				2D066A361834CEC000C2AC90 /* DVTools.m in Sources */,
 				FE285FDA18367DFD00A67C7D /* RequestListVC.m in Sources */,
 				2D90974918360696004676EC /* WGS2Mars.m in Sources */,
+				FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */,
 				2D066A2F1834CB2600C2AC90 /* HomeVC.m in Sources */,
 				FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */,
 				FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */,

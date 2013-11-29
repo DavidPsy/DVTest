@@ -6,10 +6,10 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DVBaseVC.h"
 #import "DataCenter.h"
-
-@interface JumpsVC : UIViewController <UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+ 
+@interface JumpsVC : DVBaseVC <UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (strong) IBOutlet UITextView *textView;
 @property (strong) IBOutlet UITextField *schemaTextfield;

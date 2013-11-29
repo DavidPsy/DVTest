@@ -1,0 +1,16 @@
+
+one more step , more close to the One Piece
+
+------1125之前
+    初步实现了push跳转、贪吃蛇、网络抓取的功能
+    UI经过一次重构，从Tab的形式转成 metro风格，贪吃蛇等非主要功能做成彩蛋的形式出现，并设计了彩蛋的出现方式
+    加入了诸多第三方代码，并用cocoapods管理
+    代码分层、逻辑重构
+------1126
+    todo
+      实现ui
+      重新涉及右侧的push记录，完善push功能
+      贪吃蛇hide，做彩蛋
+      尝试使用reactiveCocoa
+------
+------
