@@ -6,12 +6,12 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import "ACTDetailVC.h"
+#import "RequestDetailVC.h"
 
 #import "DataCenter.h"
 #import "NetResponseVC.h"
 
-@implementation ACTDetailVC {
+@implementation RequestDetailVC {
     NSMutableArray *_paramArray;
 }
 

@@ -8,7 +8,7 @@
 
 #import "RequestListVC.h"
 #import "DataCenter.h"
-#import "ACTDetailVC.h"
+#import "RequestDetailVC.h"
 
 @implementation RequestListVC {
     
@@ -50,6 +50,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - tableview delegate
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
@@ -75,7 +77,7 @@
     DVRequest *tmpRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    ACTDetailVC *vc = [sb instantiateViewControllerWithIdentifier:@"PageCreateRequest"];
+    RequestDetailVC *vc = [sb instantiateViewControllerWithIdentifier:@"RequestDetail"];
     vc.outRequest = tmpRequest;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -83,6 +85,7 @@
 #pragma mark - 
 
 - (IBAction)addRequest {
+    
     [self performSegueWithIdentifier:@"testSegue" sender:self];
 }
 

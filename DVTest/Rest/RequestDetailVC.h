@@ -10,7 +10,7 @@
 
 #import "DataCenter.h"
 
-@interface ACTDetailVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface RequestDetailVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)IBOutlet UITableView *paramsListView;
 @property (nonatomic,strong)IBOutlet UITextField *baseURLTextfield;
 @property (nonatomic,strong)IBOutlet UITextField *tagTextfield;

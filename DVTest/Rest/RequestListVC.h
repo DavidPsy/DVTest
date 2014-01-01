@@ -8,14 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "DataCenter.h"
+#import "DVBaseVC.h"
 
-@interface RequestListVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface RequestListVC : DVBaseVC<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)IBOutlet UITableView *listView;
 - (IBAction)addRequest;
 
-
 @end
-
 
 
 @interface RequestTableCell : UITableViewCell

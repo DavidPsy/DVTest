@@ -33,8 +33,9 @@
 		2D90975818362267004676EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D90975618362267004676EC /* InfoPlist.strings */; };
 		2D90975A18362267004676EC /* DVTest_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90975918362267004676EC /* DVTest_Tests.m */; };
 		2DFAA3201832189D00D88496 /* JumpsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAA31F1832189D00D88496 /* JumpsVC.m */; };
+		FE120755186D011200305B44 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE120754186D011200305B44 /* Common.xcassets */; };
 		FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13D4571829CCDD00EEE94E /* DVNetwork.m */; };
-		FE285FD718367DFD00A67C7D /* ACTDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* ACTDetailVC.m */; };
+		FE285FD718367DFD00A67C7D /* RequestDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* RequestDetailVC.m */; };
 		FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* NetResponseVC.m */; };
 		FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD418367DFD00A67C7D /* ParamListVC.m */; };
 		FE285FDA18367DFD00A67C7D /* RequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* RequestListVC.m */; };
@@ -95,10 +96,13 @@
 		2DFAA31E1832189D00D88496 /* JumpsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpsVC.h; sourceTree = "<group>"; };
 		2DFAA31F1832189D00D88496 /* JumpsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpsVC.m; sourceTree = "<group>"; };
 		91A3FA80CE734F4C9A3710EA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE120754186D011200305B44 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
+		FE120757186D5C2200305B44 /* DVMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVMacros.h; sourceTree = "<group>"; };
+		FE120758186D635B00305B44 /* DVCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCore.h; sourceTree = "<group>"; };
 		FE13D4561829CCDD00EEE94E /* DVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNetwork.h; sourceTree = "<group>"; };
 		FE13D4571829CCDD00EEE94E /* DVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVNetwork.m; sourceTree = "<group>"; };
-		FE285FCF18367DFD00A67C7D /* ACTDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACTDetailVC.h; sourceTree = "<group>"; };
-		FE285FD018367DFD00A67C7D /* ACTDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACTDetailVC.m; sourceTree = "<group>"; };
+		FE285FCF18367DFD00A67C7D /* RequestDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestDetailVC.h; sourceTree = "<group>"; };
+		FE285FD018367DFD00A67C7D /* RequestDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestDetailVC.m; sourceTree = "<group>"; };
 		FE285FD118367DFD00A67C7D /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
 		FE285FD218367DFD00A67C7D /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
 		FE285FD318367DFD00A67C7D /* ParamListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamListVC.h; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 				2D5067B017F17BF9000D4BAE /* AppDelegate.m */,
 				2D5067B817F17BF9000D4BAE /* MainStoryboard.storyboard */,
 				2D5067A717F17BF9000D4BAE /* Supporting Files */,
+				FE120754186D011200305B44 /* Common.xcassets */,
 			);
 			path = DVTest;
 			sourceTree = "<group>";
@@ -298,13 +303,23 @@
 			path = Jump;
 			sourceTree = "<group>";
 		};
+		FE120756186D5BF100305B44 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FE120757186D5C2200305B44 /* DVMacros.h */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		FE13D4511829CC6D00EEE94E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FE120756186D5BF100305B44 /* Util */,
 				2D90973F183605EF004676EC /* Location */,
 				2D066A3F1834D1EF00C2AC90 /* Cache */,
 				2D066A401834D1EF00C2AC90 /* UI */,
 				FE13D4541829CC6D00EEE94E /* Network */,
+				FE120758186D635B00305B44 /* DVCore.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -338,8 +353,8 @@
 		FE285FCE18367DFD00A67C7D /* Rest */ = {
 			isa = PBXGroup;
 			children = (
-				FE285FCF18367DFD00A67C7D /* ACTDetailVC.h */,
-				FE285FD018367DFD00A67C7D /* ACTDetailVC.m */,
+				FE285FCF18367DFD00A67C7D /* RequestDetailVC.h */,
+				FE285FD018367DFD00A67C7D /* RequestDetailVC.m */,
 				FE285FD118367DFD00A67C7D /* NetResponseVC.h */,
 				FE285FD218367DFD00A67C7D /* NetResponseVC.m */,
 				FE285FD318367DFD00A67C7D /* ParamListVC.h */,
@@ -442,6 +457,7 @@
 				2D5114101804F7C8002E96C4 /* README in Resources */,
 				2D5067B317F17BF9000D4BAE /* Default.png in Resources */,
 				FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */,
+				FE120755186D011200305B44 /* Common.xcassets in Resources */,
 				2D5067B517F17BF9000D4BAE /* Default@2x.png in Resources */,
 				2D5067B717F17BF9000D4BAE /* Default-568h@2x.png in Resources */,
 				2D5067BA17F17BF9000D4BAE /* MainStoryboard.storyboard in Resources */,
@@ -497,7 +513,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D066A3D1834CED900C2AC90 /* SnakeVC.m in Sources */,
-				FE285FD718367DFD00A67C7D /* ACTDetailVC.m in Sources */,
+				FE285FD718367DFD00A67C7D /* RequestDetailVC.m in Sources */,
 				2D90974218360609004676EC /* DVLocationCenter.m in Sources */,
 				2DFAA3201832189D00D88496 /* JumpsVC.m in Sources */,
 				2D066A351834CEC000C2AC90 /* DataCenter.m in Sources */,

@@ -9,7 +9,6 @@
 #import "DVBaseVC.h"
 
 @interface DVBaseVC ()
-
 @end
 
 @implementation DVBaseVC
@@ -19,10 +18,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"nav_bg"]
 //                                                  forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
 //    self.navigationController.navigationBar.translucent = YES;
-//    self.navigationController.navigationBar.backgroundColor = RGBACOLOR(0, 0, 0, 0.3);
+    self.navigationController.navigationBar.backgroundColor = DVColorClear;
+    
+    self.view.backgroundColor = RGBSAME(240);
+    
     
     [self checkIfEnableSwipeRight];
     [self checkIfEnableNavGesture];

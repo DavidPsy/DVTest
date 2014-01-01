@@ -8,7 +8,7 @@
 
 #import "DVBaseVC.h"
 #import "DataCenter.h"
- 
+
 @interface JumpsVC : DVBaseVC <UITextViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (strong) IBOutlet UITextView *textView;
