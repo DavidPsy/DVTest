@@ -27,7 +27,7 @@
 	<key>UIFileSharingEnabled（Application supports iTunes file sharing）</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
-	<string>MainStoryboard</string>
+	<string>Rest</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

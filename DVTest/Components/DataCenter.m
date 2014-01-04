@@ -10,9 +10,21 @@
 #import "NSDictionary+safe.h"
 
 #import <AFNetworking.h>
+#import "NSString+regular.h"
+#import "DVNetwork.h"
 
 #define kPathRequest @"kPathRequest"
 #define kPathPush @"kPathPush"
+
+static NSString * SimpleJSONString(NSDictionary *parameters) {
+    NSError *error = nil;
+    NSData *JSONData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:&error];
+    if (!error) {
+        return [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
+    } else {
+        return nil;
+    }
+}
 
 @implementation DataCenter
 
@@ -56,7 +68,7 @@
     [_openAppList addObject:tmpPushUnit];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray *copyArray = [NSArray arrayWithArray:_openAppList];
+        NSArray *copyArray = [NSArray arrayWithArray:self.openAppList];
         
         NSMutableArray *saveArray = [NSMutableArray array];
         for (id<DVDataBaseProtocol> tmpData in copyArray) {
@@ -74,7 +86,7 @@
     [_requestList addObject:tmpRequest];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray *copyArray = [NSArray arrayWithArray:_requestList];
+        NSArray *copyArray = [NSArray arrayWithArray:self.requestList];
         
         NSMutableArray *saveArray = [NSMutableArray array];
         for (id<DVDataBaseProtocol> tmpData in copyArray) {
@@ -103,7 +115,14 @@
         _paramsMap = [NSMutableDictionary dictionary];
         for (DVParam *tmpParam in paramsList) {
             if (tmpParam.value && tmpParam.key) {
-                [_paramsMap setValue:tmpParam.value forKey:tmpParam.key];
+                
+                NSString *aValue = tmpParam.value;
+                
+                if ([aValue isNumberOnly]) {
+                    [_paramsMap setValue:@([aValue doubleValue])  forKey:tmpParam.key];
+                } else {
+                    [_paramsMap setValue:tmpParam.value forKey:tmpParam.key];
+                }
             }
         }
         _tag = tag;
@@ -132,7 +151,6 @@
     NSDictionary *paramsDict = cacheDict[@"paramsMap"];
     NSString *tag = cacheDict[@"tag"];
     
-    
     if (!baseURL || !paramsDict || tag.length < 1) {
         return nil;
     }
@@ -153,27 +171,13 @@
     return tmpDict;
 }
 
-- (void)run:(void (^)(NSString* result)) finished {
-//    http://music.baidu.com/search?key={query}
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes =[NSSet setWithObject:@"text/html"];
-//    op.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    
-    [manager GET:@"http://music.baidu.com/search" parameters:[NSDictionary dictionaryWithObject:@"hi" forKey:@"key"] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSError *error = nil;
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseObject options:0 error:&error];
-        
-        NSLog(@"%@",[responseDictionary description]);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//        NSLog([error description]);
+- (void)run:(void (^)(NSDictionary* result,NSError *error)) finished {
+    [[DVNetwork netClient]GET:self.baseURL parameters:self.paramsMap success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",[responseObject description]);
+        finished(responseObject,nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        finished(nil,error);
     }];
-    
-
-
 }
 
 @end

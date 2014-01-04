@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFHTTPSessionManager.h"
 
-@interface DVNetwork : NSObject
+@interface DVNetwork : AFHTTPSessionManager
 
++ (instancetype)netClient;
 
 @end
+
+#import <Foundation/Foundation.h>

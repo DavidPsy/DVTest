@@ -21,7 +21,6 @@
 
 @end
 
-
 #pragma mark - 数据单元
 
 @protocol DVDataBaseProtocol <NSObject>
@@ -37,7 +36,7 @@
 @property (nonatomic,strong)NSMutableDictionary *paramsMap;
 @property (nonatomic,strong)NSString *tag;
 //@property(copy) void(^TapBlock)();
-- (void)run:(void (^)(NSString* result)) finished;
+- (void)run:(void (^)(NSDictionary* result,NSError *error)) finished;
 //typedef void(^TapBlock)(DVOpenAppUnit *tmpUnit);
 
 - (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag;

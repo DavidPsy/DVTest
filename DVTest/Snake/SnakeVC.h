@@ -10,8 +10,8 @@
 
 @interface SnakeVC : UIViewController
 
-@property (weak) IBOutlet UILabel *label;
-@property (weak) IBOutlet UIView *panel;
+@property (strong) IBOutlet UILabel *label;
+@property (strong) IBOutlet UIView *panel;
 
 - (IBAction)sliderValueChanged:(UISlider*)sender;
 

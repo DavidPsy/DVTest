@@ -29,8 +29,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self.outRequest run:^(NSString *result) {
-        
+    [self.outRequest run:^(NSDictionary *result, NSError *error) {
+        if (error) {
+            self.txtView.text = [error description];
+        } else {
+            self.txtView.text = [result description];
+        }
     }];
 }
 
