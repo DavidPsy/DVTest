@@ -6,36 +6,16 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import "RequestListVC.h"
+#import "DVRequestListVC.h"
 #import "DataCenter.h"
-#import "RequestDetailVC.h"
+#import "DVRequestInfoVC.h"
 
-@implementation RequestListVC {
-    
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (id)init {
-    self = [super init];
-    if (self) {
-        
-    }
-    return self;
-}
+@implementation DVRequestListVC
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     
 }
 
@@ -51,7 +31,6 @@
 }
 
 #pragma mark - tableview delegate
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [DataCenter sharedDataCenter].requestList.count;
@@ -75,10 +54,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DVRequest *tmpRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    RequestDetailVC *vc = [sb instantiateViewControllerWithIdentifier:@"RequestDetail"];
-    vc.outRequest = tmpRequest;
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
+    DVRequestInfoVC *vc = [sb instantiateViewControllerWithIdentifier:@"requestDetails"];
+//    vc.outRequest = tmpRequest;
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark - 

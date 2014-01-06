@@ -10,7 +10,7 @@
 #import "DataCenter.h"
 #import "DVBaseVC.h"
 
-@interface RequestListVC : DVBaseVC<UITableViewDataSource,UITableViewDelegate>
+@interface DVRequestListVC : DVBaseVC<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)IBOutlet UITableView *listView;
 - (IBAction)addRequest;
 

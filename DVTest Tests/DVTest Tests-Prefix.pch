@@ -9,4 +9,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import "DVUtil.h"
+    #import "DVMacros.h"
 #endif

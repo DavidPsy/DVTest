@@ -27,7 +27,7 @@
         <!--RequestList-->
         <scene sceneID="JLp-p2-zHp">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bQ8-hr-yeX" userLabel="RequestList" customClass="RequestListVC" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bQ8-hr-yeX" userLabel="RequestList" customClass="DVRequestListVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e3E-Wn-sTg"/>
                         <viewControllerLayoutGuide type="bottom" id="RSb-pz-D12"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-4724" y="-1792"/>
         </scene>
-        <!--Request DetailVC-->
+        <!--Request InfoVC-->
         <scene sceneID="rXS-0O-DIW">
             <objects>
-                <viewController storyboardIdentifier="RequestDetail" automaticallyAdjustsScrollViewInsets="NO" id="5jg-Fn-M31" customClass="RequestDetailVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RequestDetail" automaticallyAdjustsScrollViewInsets="NO" id="5jg-Fn-M31" customClass="DVRequestInfoVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSC-eY-M7W"/>
                         <viewControllerLayoutGuide type="bottom" id="oxx-JQ-M3d"/>
@@ -230,7 +230,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQV-aK-KGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4102" y="-1784"/>
+            <point key="canvasLocation" x="-4242" y="-1792"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x2J-Vz-Q2n">
+            <objects>
+                <viewController storyboardIdentifier="page1" id="5oW-rq-iVz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N2d-BE-1e9"/>
+                        <viewControllerLayoutGuide type="bottom" id="KxL-TE-ylt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qNK-Lx-fFw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QF6-3u-8sv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3667" y="-854"/>
+        </scene>
+        <!--Request DetailsVC-->
+        <scene sceneID="ImT-OG-PGx">
+            <objects>
+                <pageViewController storyboardIdentifier="requestDetails" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="meS-2N-Ebd" customClass="DVRequestDetailsVC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cp9-3w-nkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3200" y="-1799"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iVQ-E0-ksd">
+            <objects>
+                <viewController storyboardIdentifier="page2" id="aUD-Cv-cGy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CfT-wj-wGL"/>
+                        <viewControllerLayoutGuide type="bottom" id="NZE-ru-Kbi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="axb-6G-tAs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gso-5y-gWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3043" y="-830"/>
         </scene>
         <!--JsonPage-->
         <scene sceneID="PE4-tV-2Kn">
@@ -271,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg2-kP-GJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3490" y="-1744"/>
+            <point key="canvasLocation" x="-3733" y="-1799"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

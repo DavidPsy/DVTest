@@ -8,23 +8,10 @@
 
 #import "DataCenter.h"
 #import "NSDictionary+safe.h"
-
-#import <AFNetworking.h>
 #import "NSString+regular.h"
 #import "DVNetwork.h"
 
 #define kPathRequest @"kPathRequest"
-#define kPathPush @"kPathPush"
-
-static NSString * SimpleJSONString(NSDictionary *parameters) {
-    NSError *error = nil;
-    NSData *JSONData = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:&error];
-    if (!error) {
-        return [[NSString alloc] initWithData:JSONData encoding:NSUTF8StringEncoding];
-    } else {
-        return nil;
-    }
-}
 
 @implementation DataCenter
 
@@ -41,17 +28,8 @@ static NSString * SimpleJSONString(NSDictionary *parameters) {
     self = [super init];
     if (self) {
         _requestList = [NSMutableArray array];
-        _openAppList = [NSMutableArray array];
         
         //read from cache
-        NSArray *pushArray = [[NSUserDefaults standardUserDefaults]objectForKey:kPathPush];
-        for (NSDictionary *tmpDict in pushArray) {
-            DVOpenAppUnit *tmpPushUnit = [[DVOpenAppUnit alloc] initWithDict:tmpDict];
-            if (tmpPushUnit) {
-                [_openAppList addObject:tmpPushUnit];
-            }
-        }
-        
         NSArray *requestsArray = [[NSUserDefaults standardUserDefaults]objectForKey:kPathRequest];
         for (NSDictionary *tmpDict in requestsArray) {
             DVRequest *tmpRequest = [[DVRequest alloc] initWithDict:tmpDict];
@@ -62,24 +40,6 @@ static NSString * SimpleJSONString(NSDictionary *parameters) {
         
     }
     return self;
-}
-
-- (void)appendPush:(DVOpenAppUnit*)tmpPushUnit {
-    [_openAppList addObject:tmpPushUnit];
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        NSArray *copyArray = [NSArray arrayWithArray:self.openAppList];
-        
-        NSMutableArray *saveArray = [NSMutableArray array];
-        for (id<DVDataBaseProtocol> tmpData in copyArray) {
-            NSDictionary *dict = [tmpData convertToDict];
-            [saveArray addObject:dict];
-        }
-        
-        [[NSUserDefaults standardUserDefaults] setObject:saveArray forKey:kPathPush];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    });
-    
 }
 
 - (void)appendRequest:(DVRequest*)tmpRequest {
@@ -172,50 +132,45 @@ static NSString * SimpleJSONString(NSDictionary *parameters) {
 }
 
 - (void)run:(void (^)(NSDictionary* result,NSError *error)) finished {
-    [[DVNetwork netClient]GET:self.baseURL parameters:self.paramsMap success:^(NSURLSessionDataTask *task, id responseObject) {
+    
+//    {
+//    name: "方世玉",
+//    tag: 1,
+//    content: "明天去西雅图夜未眠",
+//    createUserId: "11",
+//    joinUsersId: "222",
+//    tag: "1",
+//    lat: "32.41",
+//    lng: "143.44",
+//    address:"北三环",
+//    startTime: "1386730800000",
+//    headPic: ""
+//    },
+    
+    NSDictionary *params = @{@"name": @"盘世玉",
+                             @"tag":@(1),
+                             @"content":@"明天去西雅图夜未眠",
+                             @"createUserId":@"1111",
+                             @"startTime":@(1386730800000)};
+    
+    [[DVNetwork netClient] POST:@"createNew" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",[responseObject description]);
         finished(responseObject,nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",[error description]);
         finished(nil,error);
     }];
+    
+//    [[DVNetwork netClient]GET:self.baseURL parameters:self.paramsMap success:^(NSURLSessionDataTask *task, id responseObject) {
+//        NSLog(@"%@",[responseObject description]);
+//        finished(responseObject,nil);
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        finished(nil,error);
+//    }];
 }
 
 @end
 
 @implementation DVParam
-
-
-@end
-
-@implementation DVOpenAppUnit
-
-- (id)initWithSchema:(NSString*)schema content:(NSString*)content tag:(NSString*)tag {
-    if (schema.length > 1 && content.length > 1 && tag.length > 1) {
-        self = [super init];
-        if (self) {
-            _schema = schema;
-            _content = content;
-            _tag = tag;
-        }
-        return self;
-    }
-    
-    return nil;
-}
-
-- (id)initWithDict:(NSDictionary*)cacheDict {
-    if (!cacheDict) {
-        return nil;
-    }
-    return [self initWithSchema:cacheDict[@"schema"] content:cacheDict[@"content"] tag:cacheDict[@"tag"]];
-}
-
-- (NSDictionary*)convertToDict {
-    NSMutableDictionary *tmpDict = [NSMutableDictionary dictionary];
-    [tmpDict setSafeValue:_schema forKey:@"schema"];
-    [tmpDict setSafeValue:_content forKey:@"content"];
-    [tmpDict setSafeValue:_tag forKey:@"tag"];
-    return tmpDict;
-}
 
 @end

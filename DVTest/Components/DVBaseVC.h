@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "TKAlertCenter.h"
-#import "DVTools.h"
 
 @interface DVBaseVC : UIViewController
 @property (nonatomic,assign)BOOL enableSwipeBack;
