@@ -147,11 +147,28 @@
 //    headPic: ""
 //    },
     
+    UIImage *image = [UIImage imageNamed:@"xiaoqi.jpg"];
+    NSData *imageData = UIImagePNGRepresentation(image);
+    
+    NSString *tmpURL = @"http://192.168.1.104:9080/bird/image/upload";
+    [[DVNetwork netClient] POST:tmpURL parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:imageData name:@"photo" fileName:@"psy.png" mimeType:@"image/png"];
+        NSLog(@"[pushCertificate] pushCertificate Image, uploading... ");
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"success");
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"fail");
+    }];
+    
+    return;
+    
     NSDictionary *params = @{@"name": @"盘世玉",
                              @"tag":@(1),
                              @"content":@"明天去西雅图夜未眠",
                              @"createUserId":@"1111",
                              @"startTime":@(1386730800000)};
+    
+    
     
     [[DVNetwork netClient] POST:@"createNew" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",[responseObject description]);

@@ -7,12 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFHTTPSessionManager.h"
+#import "AFNetworking.h"
 
 @interface DVNetwork : AFHTTPSessionManager
 
 + (instancetype)netClient;
 
-@end
+//+ (void)getPath:(NSString *)path
+//     parameters:(NSDictionary *)parameters
+//        success:(void (^)(NSDictionary *result, NSData *responseObject))success
+//        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+//
+//+ (void)postPath:(NSString *)path
+//      parameters:(NSDictionary *)parameters
+//         success:(void (^)(NSDictionary *result))success
+//         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
-#import <Foundation/Foundation.h>
+@end

@@ -34,6 +34,7 @@
 		FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* NetResponseVC.m */; };
 		FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD418367DFD00A67C7D /* ParamListVC.m */; };
 		FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* DVRequestListVC.m */; };
+		FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */; };
 		FE58217D1877C6B100AED0B9 /* NSString+regular.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58217C1877C6B100AED0B9 /* NSString+regular.m */; };
 		FE5821821878074300AED0B9 /* Rest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5821811878074300AED0B9 /* Rest.storyboard */; };
 		FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7955DD1847CA0100BB4822 /* DVBaseVC.m */; };
@@ -98,6 +99,7 @@
 		FE285FD418367DFD00A67C7D /* ParamListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamListVC.m; sourceTree = "<group>"; };
 		FE285FD518367DFD00A67C7D /* DVRequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestListVC.h; sourceTree = "<group>"; };
 		FE285FD618367DFD00A67C7D /* DVRequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestListVC.m; sourceTree = "<group>"; };
+		FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaoqi.jpg; sourceTree = "<group>"; };
 		FE58217B1877C6B100AED0B9 /* NSString+regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+regular.h"; sourceTree = "<group>"; };
 		FE58217C1877C6B100AED0B9 /* NSString+regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+regular.m"; sourceTree = "<group>"; };
 		FE58217E1877C99700AED0B9 /* DVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVUtil.h; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		2D50679417F17BF9000D4BAE = {
 			isa = PBXGroup;
 			children = (
+				FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */,
 				FEF59DE81844BDA3007CA28D /* DEVSteps */,
 				2D51140F1804F7C8002E96C4 /* README */,
 				FE13D4551829CC7700EEE94E /* ThirdParty */,
@@ -414,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5067AB17F17BF9000D4BAE /* InfoPlist.strings in Resources */,
+				FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */,
 				2D5114101804F7C8002E96C4 /* README in Resources */,
 				2D5067B317F17BF9000D4BAE /* Default.png in Resources */,
 				FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */,

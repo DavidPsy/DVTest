@@ -54,10 +54,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DVRequest *tmpRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
     
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
-    DVRequestInfoVC *vc = [sb instantiateViewControllerWithIdentifier:@"requestDetails"];
-//    vc.outRequest = tmpRequest;
-    [self.navigationController pushViewController:vc animated:YES];
+    [tmpRequest run:^(NSDictionary *result, NSError *error) {
+        
+    }];
+//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
+//    DVRequestInfoVC *vc = [sb instantiateViewControllerWithIdentifier:@"requestDetails"];
+////    vc.outRequest = tmpRequest;
+//    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
