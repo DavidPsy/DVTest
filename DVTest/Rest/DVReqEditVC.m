@@ -6,12 +6,12 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import "DVRequestInfoVC.h"
+#import "DVReqEditVC.h"
 
 #import "DataCenter.h"
-#import "NetResponseVC.h"
+#import "DVReqResultVC.h"
 
-@implementation DVRequestInfoVC {
+@implementation DVReqEditVC {
     NSMutableArray *_paramArray;
 }
 
@@ -107,7 +107,7 @@
     }
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
-    NetResponseVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
+    DVReqResultVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
     vc.outRequest = newRequest;
     [self.navigationController pushViewController:vc animated:YES];
 }

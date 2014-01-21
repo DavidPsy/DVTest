@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataCenter.h"
 
-@interface NetResponseVC : UIViewController
+@interface DVReqResultVC : UIViewController
 @property (nonatomic,strong)DVRequest *outRequest;
 @property (nonatomic,strong)IBOutlet UITextView *txtView;
 

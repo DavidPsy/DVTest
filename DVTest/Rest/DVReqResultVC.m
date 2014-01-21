@@ -6,23 +6,14 @@
 //  Copyright (c) 2013年 psy. All rights reserved.
 //
 
-#import "NetResponseVC.h"
+#import "DVReqResultVC.h"
 #import "DataCenter.h"
 
-@interface NetResponseVC ()
+@interface DVReqResultVC ()
 
 @end
 
-@implementation NetResponseVC
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@implementation DVReqResultVC
 
 - (void)viewDidLoad
 {

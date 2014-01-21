@@ -24,7 +24,7 @@
 //    self.navigationController.navigationBar.translucent = YES;
     self.navigationController.navigationBar.backgroundColor = DVColorClear;
     
-    self.view.backgroundColor = RGBSAME(240);
+    self.view.backgroundColor = RGBSAME(224);
     
     
     [self checkIfEnableSwipeRight];

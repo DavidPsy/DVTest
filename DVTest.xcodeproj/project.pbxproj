@@ -30,15 +30,14 @@
 		2D90975A18362267004676EC /* DVTest_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D90975918362267004676EC /* DVTest_Tests.m */; };
 		FE120755186D011200305B44 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE120754186D011200305B44 /* Common.xcassets */; };
 		FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = FE13D4571829CCDD00EEE94E /* DVNetwork.m */; };
-		FE285FD718367DFD00A67C7D /* DVRequestInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* DVRequestInfoVC.m */; };
-		FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* NetResponseVC.m */; };
-		FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD418367DFD00A67C7D /* ParamListVC.m */; };
+		FE285FD718367DFD00A67C7D /* DVReqEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* DVReqEditVC.m */; };
+		FE285FD818367DFD00A67C7D /* DVReqResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* DVReqResultVC.m */; };
 		FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* DVRequestListVC.m */; };
 		FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */; };
 		FE58217D1877C6B100AED0B9 /* NSString+regular.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58217C1877C6B100AED0B9 /* NSString+regular.m */; };
 		FE5821821878074300AED0B9 /* Rest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5821811878074300AED0B9 /* Rest.storyboard */; };
 		FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7955DD1847CA0100BB4822 /* DVBaseVC.m */; };
-		FE7B60B61879316C00E6658B /* DVRequestDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7B60B51879316C00E6658B /* DVRequestDetailsVC.m */; };
+		FE7B60B61879316C00E6658B /* DVReqDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7B60B51879316C00E6658B /* DVReqDetailsVC.m */; };
 		FEF59DE718430F23007CA28D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF59DE618430F23007CA28D /* CoreLocation.framework */; };
 		FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */ = {isa = PBXBuildFile; fileRef = FEF59DE81844BDA3007CA28D /* DEVSteps */; };
 /* End PBXBuildFile section */
@@ -91,12 +90,10 @@
 		FE120758186D635B00305B44 /* DVCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVCore.h; sourceTree = "<group>"; };
 		FE13D4561829CCDD00EEE94E /* DVNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVNetwork.h; sourceTree = "<group>"; };
 		FE13D4571829CCDD00EEE94E /* DVNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVNetwork.m; sourceTree = "<group>"; };
-		FE285FCF18367DFD00A67C7D /* DVRequestInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestInfoVC.h; sourceTree = "<group>"; };
-		FE285FD018367DFD00A67C7D /* DVRequestInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestInfoVC.m; sourceTree = "<group>"; };
-		FE285FD118367DFD00A67C7D /* NetResponseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetResponseVC.h; sourceTree = "<group>"; };
-		FE285FD218367DFD00A67C7D /* NetResponseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetResponseVC.m; sourceTree = "<group>"; };
-		FE285FD318367DFD00A67C7D /* ParamListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParamListVC.h; sourceTree = "<group>"; };
-		FE285FD418367DFD00A67C7D /* ParamListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParamListVC.m; sourceTree = "<group>"; };
+		FE285FCF18367DFD00A67C7D /* DVReqEditVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVReqEditVC.h; sourceTree = "<group>"; };
+		FE285FD018367DFD00A67C7D /* DVReqEditVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVReqEditVC.m; sourceTree = "<group>"; };
+		FE285FD118367DFD00A67C7D /* DVReqResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVReqResultVC.h; sourceTree = "<group>"; };
+		FE285FD218367DFD00A67C7D /* DVReqResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVReqResultVC.m; sourceTree = "<group>"; };
 		FE285FD518367DFD00A67C7D /* DVRequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestListVC.h; sourceTree = "<group>"; };
 		FE285FD618367DFD00A67C7D /* DVRequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestListVC.m; sourceTree = "<group>"; };
 		FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaoqi.jpg; sourceTree = "<group>"; };
@@ -106,8 +103,8 @@
 		FE5821811878074300AED0B9 /* Rest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Rest.storyboard; sourceTree = "<group>"; };
 		FE7955DC1847CA0100BB4822 /* DVBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVBaseVC.h; sourceTree = "<group>"; };
 		FE7955DD1847CA0100BB4822 /* DVBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVBaseVC.m; sourceTree = "<group>"; };
-		FE7B60B41879316C00E6658B /* DVRequestDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestDetailsVC.h; sourceTree = "<group>"; };
-		FE7B60B51879316C00E6658B /* DVRequestDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestDetailsVC.m; sourceTree = "<group>"; };
+		FE7B60B41879316C00E6658B /* DVReqDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVReqDetailsVC.h; sourceTree = "<group>"; };
+		FE7B60B51879316C00E6658B /* DVReqDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVReqDetailsVC.m; sourceTree = "<group>"; };
 		FEF59DE618430F23007CA28D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FEF59DE81844BDA3007CA28D /* DEVSteps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DEVSteps; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,16 +311,14 @@
 		FE285FCE18367DFD00A67C7D /* Rest */ = {
 			isa = PBXGroup;
 			children = (
-				FE285FCF18367DFD00A67C7D /* DVRequestInfoVC.h */,
-				FE285FD018367DFD00A67C7D /* DVRequestInfoVC.m */,
-				FE285FD118367DFD00A67C7D /* NetResponseVC.h */,
-				FE285FD218367DFD00A67C7D /* NetResponseVC.m */,
-				FE285FD318367DFD00A67C7D /* ParamListVC.h */,
-				FE285FD418367DFD00A67C7D /* ParamListVC.m */,
+				FE285FCF18367DFD00A67C7D /* DVReqEditVC.h */,
+				FE285FD018367DFD00A67C7D /* DVReqEditVC.m */,
+				FE285FD118367DFD00A67C7D /* DVReqResultVC.h */,
+				FE285FD218367DFD00A67C7D /* DVReqResultVC.m */,
 				FE285FD518367DFD00A67C7D /* DVRequestListVC.h */,
 				FE285FD618367DFD00A67C7D /* DVRequestListVC.m */,
-				FE7B60B41879316C00E6658B /* DVRequestDetailsVC.h */,
-				FE7B60B51879316C00E6658B /* DVRequestDetailsVC.m */,
+				FE7B60B41879316C00E6658B /* DVReqDetailsVC.h */,
+				FE7B60B51879316C00E6658B /* DVReqDetailsVC.m */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -476,18 +471,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE285FD718367DFD00A67C7D /* DVRequestInfoVC.m in Sources */,
+				FE285FD718367DFD00A67C7D /* DVReqEditVC.m in Sources */,
 				2D90974218360609004676EC /* DVLocationCenter.m in Sources */,
 				2D066A351834CEC000C2AC90 /* DataCenter.m in Sources */,
 				2D5067AD17F17BF9000D4BAE /* main.m in Sources */,
 				2D5067B117F17BF9000D4BAE /* AppDelegate.m in Sources */,
-				FE7B60B61879316C00E6658B /* DVRequestDetailsVC.m in Sources */,
+				FE7B60B61879316C00E6658B /* DVReqDetailsVC.m in Sources */,
 				FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */,
 				2D90974918360696004676EC /* WGS2Mars.m in Sources */,
 				FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */,
 				FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */,
-				FE285FD918367DFD00A67C7D /* ParamListVC.m in Sources */,
-				FE285FD818367DFD00A67C7D /* NetResponseVC.m in Sources */,
+				FE285FD818367DFD00A67C7D /* DVReqResultVC.m in Sources */,
 				2D2A9BFC182A37FE002E9952 /* TKAlertCenter.m in Sources */,
 				FE58217D1877C6B100AED0B9 /* NSString+regular.m in Sources */,
 				2D066A431834D2E400C2AC90 /* NSDictionary+safe.m in Sources */,

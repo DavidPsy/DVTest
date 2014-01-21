@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DVRequestDetailsVC : UIPageViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface DVReqDetailsVC : UIViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @end

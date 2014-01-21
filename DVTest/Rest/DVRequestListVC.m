@@ -8,7 +8,7 @@
 
 #import "DVRequestListVC.h"
 #import "DataCenter.h"
-#import "DVRequestInfoVC.h"
+#import "DVReqEditVC.h"
 
 @implementation DVRequestListVC
 

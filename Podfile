@@ -1,5 +1,6 @@
 platform :ios, '7.0'
 
+pod 'ICETutorial', '~> 1.0.2'
 pod 'AFHTTPRequestOperationLogger', '~> 1.0.0'
 pod 'RNFrostedSidebar', '~> 0.2.0'
 pod 'NSTimer-Blocks', '~> 0.0.1'
