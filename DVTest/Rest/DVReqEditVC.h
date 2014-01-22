@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "DVPageContentVC.h"
-
 #import "DataCenter.h"
 
-@interface DVReqEditVC : DVPageContentVC<UITableViewDataSource,UITableViewDelegate>
+@interface DVReqEditVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong)IBOutlet UITableView *paramsListView;
 @property (nonatomic,strong)IBOutlet UITextField *baseURLTextfield;
 @property (nonatomic,strong)IBOutlet UITextField *tagTextfield;
