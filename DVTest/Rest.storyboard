@@ -74,6 +74,9 @@
                                         <state key="normal" title="New">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="5jg-Fn-M31" kind="push" id="nBy-dn-qzB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-Gi-0d9" userLabel="BtnAddParam">
                                         <rect key="frame" x="42" y="10" width="87" height="47"/>
@@ -103,12 +106,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEd-3k-EYU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4848" y="-1848"/>
+            <point key="canvasLocation" x="-4902" y="-1811"/>
         </scene>
         <!--Req EditVC-->
         <scene sceneID="rXS-0O-DIW">
             <objects>
-                <viewController storyboardIdentifier="RequestDetail" automaticallyAdjustsScrollViewInsets="NO" id="5jg-Fn-M31" customClass="DVReqEditVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reqEdit" automaticallyAdjustsScrollViewInsets="NO" id="5jg-Fn-M31" customClass="DVReqEditVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TSC-eY-M7W"/>
                         <viewControllerLayoutGuide type="bottom" id="oxx-JQ-M3d"/>
@@ -242,36 +245,26 @@
             </objects>
             <point key="canvasLocation" x="-4304" y="-1792"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="vRc-20-GUl">
+            <objects>
+                <pageViewController storyboardIdentifier="pagesVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="1hA-k3-1O2" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8VX-uV-vBe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5351" y="-1114"/>
+        </scene>
         <!--Req DetailsVC-->
         <scene sceneID="ImT-OG-PGx">
             <objects>
-                <pageViewController storyboardIdentifier="requestDetails" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="meS-2N-Ebd" customClass="DVReqDetailsVC" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="reqDetails" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="meS-2N-Ebd" customClass="DVReqDetailsVC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cp9-3w-nkn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3344" y="-1811"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="iVQ-E0-ksd">
-            <objects>
-                <viewController storyboardIdentifier="page2" id="aUD-Cv-cGy" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CfT-wj-wGL"/>
-                        <viewControllerLayoutGuide type="bottom" id="NZE-ru-Kbi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="axb-6G-tAs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gso-5y-gWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-4555" y="-914"/>
+            <point key="canvasLocation" x="-4856" y="-1107"/>
         </scene>
         <!--JsonPage-->
         <scene sceneID="PE4-tV-2Kn">
             <objects>
-                <viewController storyboardIdentifier="netresponse" id="2Qu-3J-1JK" userLabel="JsonPage" customClass="DVReqResultVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reqResult" id="2Qu-3J-1JK" userLabel="JsonPage" customClass="DVReqResultVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uM0-Gy-n83"/>
                         <viewControllerLayoutGuide type="bottom" id="vhp-Rc-lVe"/>
@@ -307,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zg2-kP-GJE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3751" y="-1799"/>
+            <point key="canvasLocation" x="-4403" y="-1107"/>
         </scene>
     </scenes>
     <resources>

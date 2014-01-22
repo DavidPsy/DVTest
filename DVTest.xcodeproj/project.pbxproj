@@ -33,6 +33,7 @@
 		FE285FD718367DFD00A67C7D /* DVReqEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* DVReqEditVC.m */; };
 		FE285FD818367DFD00A67C7D /* DVReqResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* DVReqResultVC.m */; };
 		FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* DVRequestListVC.m */; };
+		FE4630FB188F4B7E009AF5F0 /* DVPageContentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4630FA188F4B7E009AF5F0 /* DVPageContentVC.m */; };
 		FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */; };
 		FE58217D1877C6B100AED0B9 /* NSString+regular.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58217C1877C6B100AED0B9 /* NSString+regular.m */; };
 		FE5821821878074300AED0B9 /* Rest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5821811878074300AED0B9 /* Rest.storyboard */; };
@@ -96,6 +97,8 @@
 		FE285FD218367DFD00A67C7D /* DVReqResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVReqResultVC.m; sourceTree = "<group>"; };
 		FE285FD518367DFD00A67C7D /* DVRequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestListVC.h; sourceTree = "<group>"; };
 		FE285FD618367DFD00A67C7D /* DVRequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestListVC.m; sourceTree = "<group>"; };
+		FE4630F9188F4B7E009AF5F0 /* DVPageContentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVPageContentVC.h; sourceTree = "<group>"; };
+		FE4630FA188F4B7E009AF5F0 /* DVPageContentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVPageContentVC.m; sourceTree = "<group>"; };
 		FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaoqi.jpg; sourceTree = "<group>"; };
 		FE58217B1877C6B100AED0B9 /* NSString+regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+regular.h"; sourceTree = "<group>"; };
 		FE58217C1877C6B100AED0B9 /* NSString+regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+regular.m"; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				FE285FD618367DFD00A67C7D /* DVRequestListVC.m */,
 				FE7B60B41879316C00E6658B /* DVReqDetailsVC.h */,
 				FE7B60B51879316C00E6658B /* DVReqDetailsVC.m */,
+				FE4630F9188F4B7E009AF5F0 /* DVPageContentVC.h */,
+				FE4630FA188F4B7E009AF5F0 /* DVPageContentVC.m */,
 			);
 			path = Rest;
 			sourceTree = "<group>";
@@ -475,6 +480,7 @@
 				2D90974218360609004676EC /* DVLocationCenter.m in Sources */,
 				2D066A351834CEC000C2AC90 /* DataCenter.m in Sources */,
 				2D5067AD17F17BF9000D4BAE /* main.m in Sources */,
+				FE4630FB188F4B7E009AF5F0 /* DVPageContentVC.m in Sources */,
 				2D5067B117F17BF9000D4BAE /* AppDelegate.m in Sources */,
 				FE7B60B61879316C00E6658B /* DVReqDetailsVC.m in Sources */,
 				FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */,

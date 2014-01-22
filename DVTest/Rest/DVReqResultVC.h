@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DVPageContentVC.h"
 #import "DataCenter.h"
 
-@interface DVReqResultVC : UIViewController
+@interface DVReqResultVC : DVPageContentVC
 @property (nonatomic,strong)DVRequest *outRequest;
 @property (nonatomic,strong)IBOutlet UITextView *txtView;
 

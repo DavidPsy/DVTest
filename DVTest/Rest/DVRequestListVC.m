@@ -9,6 +9,7 @@
 #import "DVRequestListVC.h"
 #import "DataCenter.h"
 #import "DVReqEditVC.h"
+#import "DVReqDetailsVC.h"
 
 @implementation DVRequestListVC
 
@@ -57,10 +58,9 @@
     [tmpRequest run:^(NSDictionary *result, NSError *error) {
         
     }];
-//    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
-//    DVRequestInfoVC *vc = [sb instantiateViewControllerWithIdentifier:@"requestDetails"];
-////    vc.outRequest = tmpRequest;
-//    [self.navigationController pushViewController:vc animated:YES];
+    DVReqDetailsVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"reqDetails"];
+    vc.outRequest = tmpRequest;
+    [self.navigationController pushViewController:vc animated:YES];
     
 }
 
