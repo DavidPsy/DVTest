@@ -11,7 +11,5 @@
 @class DVRequest;
 
 @interface DVReqDetailsVC : UIViewController<UIPageViewControllerDelegate, UIPageViewControllerDataSource>
-
 @property (nonatomic,strong)DVRequest *outRequest;
-
 @end

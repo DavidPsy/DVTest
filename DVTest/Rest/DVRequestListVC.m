@@ -53,13 +53,13 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DVRequest *tmpRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
+    DVRequest *aRequest = [[DataCenter sharedDataCenter].requestList objectAtIndex:indexPath.row];
     
-    [tmpRequest run:^(NSDictionary *result, NSError *error) {
+    [aRequest run:^(NSDictionary *result, NSError *error) {
         
     }];
     DVReqDetailsVC *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"reqDetails"];
-    vc.outRequest = tmpRequest;
+    vc.outRequest = aRequest;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

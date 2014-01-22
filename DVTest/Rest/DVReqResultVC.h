@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DVPageContentVC.h"
 #import "DataCenter.h"
 
-@interface DVReqResultVC : DVPageContentVC
+@interface DVReqResultVC : UIViewController
 @property (nonatomic,strong)DVRequest *outRequest;
 @property (nonatomic,strong)IBOutlet UITextView *txtView;
-
 
 - (IBAction)onBack;
 

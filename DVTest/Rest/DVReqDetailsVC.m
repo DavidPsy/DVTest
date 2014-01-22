@@ -7,15 +7,12 @@
 //
 
 #import "DVReqDetailsVC.h"
-#import "DVPageContentVC.h"
 
-@interface DVReqDetailsVC ()
-
-@end
+#import "DVReqResultVC.h"
+#import "DVReqEditVC.h"
 
 @implementation DVReqDetailsVC {
     UIPageViewController *_pagesVC;
-    
     NSMutableArray *_subVCs;
 }
 
@@ -29,12 +26,16 @@
     
     _subVCs = [NSMutableArray array];
     
-    [_subVCs addObject:[self.storyboard instantiateViewControllerWithIdentifier:@"reqResult"]];
-    [_subVCs addObject:[self.storyboard instantiateViewControllerWithIdentifier:@"reqEdit"]];
+    DVReqResultVC *resultVC = [self.storyboard instantiateViewControllerWithIdentifier:@"reqResult"];
+    resultVC.outRequest = self.outRequest;
+    
+    DVReqEditVC *editVC = [self.storyboard instantiateViewControllerWithIdentifier:@"reqEdit"];
+    editVC.outRequest = self.outRequest;
+    
+    [_subVCs addObject:resultVC];
+    [_subVCs addObject:editVC];
     
     [_pagesVC setViewControllers:@[_subVCs[0]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
-    
-    
     
     [self addChildViewController:_pagesVC];
     [self.view addSubview:_pagesVC.view];
@@ -47,46 +48,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(DVPageContentVC *)viewController
-{
-    NSLog(@"viewControllerBeforeViewController");
-    NSUInteger index = [viewController pageIndex];
-//
-    if ((index == 0) || (index == NSNotFound)) {
-        return nil;
+- (UIViewController*)subPagefromVC:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[DVReqEditVC class]]) {
+        return _subVCs[0];
+    } else {
+        return _subVCs[1];
     }
-    viewController.pageIndex = 0;
-    return _subVCs[0];
 }
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(DVPageContentVC *)viewController
-{
-    NSLog(@"viewControllerAfterViewController");
-    NSUInteger index = [viewController pageIndex];
-//    NSUInteger index = [_subVCs indexOfObject:viewController];
-//    
-//    return _subVCs[0];
-//    
-    if (index == NSNotFound || index == _subVCs.count-1) {
-        return nil;
-    }
-    viewController.pageIndex = 1;
-    return _subVCs[1];
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+    return [self subPagefromVC:viewController];
 }
 
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+    return [self subPagefromVC:viewController];
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
     return [_subVCs count];
 }
 
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
     return 0;
 }
-
-- (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientatio {
-    return UIPageViewControllerSpineLocationMin;
-}
-
 
 @end

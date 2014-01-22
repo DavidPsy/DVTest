@@ -40,9 +40,9 @@
 #pragma mark - 
 
 - (void)checkIfEnableNavGesture {
-//    if (!_enableNavGesture) {
-//        return;
-//    }
+    if (!_enableNavGesture) {
+        return;
+    }
     
     UISwipeGestureRecognizer *swipeGestureUp=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(onGestureUp)];
     swipeGestureUp.direction = UISwipeGestureRecognizerDirectionDown;
