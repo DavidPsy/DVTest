@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "DataCenter.h"
 
-@interface DVReqEditVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@class ParamTableCell;
+@protocol ParamProtocol <NSObject>
+- (void)onDeleteParam:(ParamTableCell*)cell;
+@end
+
+@interface DVReqEditVC : UIViewController<UITableViewDataSource,UITableViewDelegate,ParamProtocol>
 @property (nonatomic,strong)IBOutlet UITableView *paramsListView;
 @property (nonatomic,strong)IBOutlet UITextField *baseURLTextfield;
 @property (nonatomic,strong)IBOutlet UITextField *tagTextfield;
@@ -18,9 +22,7 @@
 @property (nonatomic,strong) DVRequest *outRequest;
 
 - (IBAction)onCreate;
-
 - (IBAction)onAdd;
-- (IBAction)onExecute;
 
 @end
 
@@ -34,7 +36,9 @@
 @property (nonatomic,strong)IBOutlet UITextField *valueTextfield;
 
 @property (nonatomic,strong)DVParam *refParam;
+@property (nonatomic,weak) id<ParamProtocol> delegate;
 
-- (IBAction)onUpdateParam;
+- (IBAction)onDeleteParam;
+- (void)updateData;
 
 @end

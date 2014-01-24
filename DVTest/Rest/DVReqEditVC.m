@@ -68,6 +68,7 @@
         tmpCell = [[ParamTableCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
+    tmpCell.delegate = self;
     tmpCell.refParam = [_paramArray objectAtIndex:indexPath.row];
     tmpCell.keyTextfield.text = tmpCell.refParam.key;
     tmpCell.valueTextfield.text = tmpCell.refParam.value;
@@ -82,10 +83,23 @@
     return NO;
 }
 
-#pragma mark - 
+#pragma mark -
 
 - (IBAction)onCreate {
-    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray tag:self.tagTextfield.text];
+    
+    for (int i=0; i<[self.paramsListView numberOfRowsInSection:0]; i++) {
+        ParamTableCell *cell = (ParamTableCell*)[self.paramsListView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        [cell updateData];
+    }
+    
+    NSArray *Params = [_paramArray mapCar:^id(DVParam *obj, NSUInteger idx, BOOL *stop) {
+        if (obj && obj.key.length > 0 && obj.value.length > 0) {
+            return obj;
+        }
+        return nil;
+    }];
+    
+    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:Params tag:self.tagTextfield.text];
     if (newRequest) {
         [[DataCenter sharedDataCenter] appendRequest:newRequest];
     }
@@ -100,20 +114,17 @@
     [self.paramsListView reloadData];
 }
 
-- (IBAction)onExecute {
-    DVRequest *newRequest = [[DVRequest alloc] initWithURL:self.baseURLTextfield.text paramsList:_paramArray tag:self.tagTextfield.text];
-    if (!newRequest) {
-        return;
-    }
-    
-    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Rest" bundle:nil];
-    DVReqResultVC *vc = [sb instantiateViewControllerWithIdentifier:@"netresponse"];
-    vc.outRequest = newRequest;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 - (void)onTapBackground {
     [self setEditing:NO];
+}
+
+- (void)onDeleteParam:(ParamTableCell*)cell {
+    [_paramArray removeObject:cell.refParam];
+    
+    NSIndexPath *indexpath = [self.paramsListView indexPathForCell:cell];
+    [self.paramsListView deleteRowsAtIndexPaths:@[indexpath] withRowAnimation:UITableViewRowAnimationMiddle];
+    
+//    [self.paramsListView reloadData];
 }
 
 @end
@@ -123,13 +134,16 @@
 
 @implementation ParamTableCell
 
-- (IBAction)onUpdateParam {
+- (IBAction)onDeleteParam {
+    [_delegate onDeleteParam:self];
+}
+
+- (void)updateData {
     if (!_refParam) {
         return;
     }
     _refParam.key = _keyTextfield.text;
     _refParam.value = _valueTextfield.text;
-    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

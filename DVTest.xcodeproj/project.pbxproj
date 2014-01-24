@@ -10,6 +10,7 @@
 		0CDEC50F29FE4BB0B0C025DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A3FA80CE734F4C9A3710EA /* libPods.a */; };
 		2D066A351834CEC000C2AC90 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A321834CEC000C2AC90 /* DataCenter.m */; };
 		2D066A431834D2E400C2AC90 /* NSDictionary+safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D066A421834D2E400C2AC90 /* NSDictionary+safe.m */; };
+		2D19E68818925ADB00D0625E /* NSArray+additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D19E68718925ADB00D0625E /* NSArray+additions.m */; };
 		2D2A9BFC182A37FE002E9952 /* TKAlertCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2A9BFB182A37FE002E9952 /* TKAlertCenter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2D5067A117F17BF9000D4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A017F17BF9000D4BAE /* UIKit.framework */; };
 		2D5067A317F17BF9000D4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D5067A217F17BF9000D4BAE /* Foundation.framework */; };
@@ -58,6 +59,8 @@
 		2D066A321834CEC000C2AC90 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
 		2D066A411834D2E400C2AC90 /* NSDictionary+safe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+safe.h"; sourceTree = "<group>"; };
 		2D066A421834D2E400C2AC90 /* NSDictionary+safe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+safe.m"; sourceTree = "<group>"; };
+		2D19E68618925ADB00D0625E /* NSArray+additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+additions.h"; sourceTree = "<group>"; };
+		2D19E68718925ADB00D0625E /* NSArray+additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+additions.m"; sourceTree = "<group>"; };
 		2D2A9BFA182A37FE002E9952 /* TKAlertCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKAlertCenter.h; sourceTree = "<group>"; };
 		2D2A9BFB182A37FE002E9952 /* TKAlertCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKAlertCenter.m; sourceTree = "<group>"; };
 		2D50679D17F17BF9000D4BAE /* DVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -265,6 +268,8 @@
 				FE58217B1877C6B100AED0B9 /* NSString+regular.h */,
 				FE58217C1877C6B100AED0B9 /* NSString+regular.m */,
 				FE58217E1877C99700AED0B9 /* DVUtil.h */,
+				2D19E68618925ADB00D0625E /* NSArray+additions.h */,
+				2D19E68718925ADB00D0625E /* NSArray+additions.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 				FE7B60B61879316C00E6658B /* DVReqDetailsVC.m in Sources */,
 				FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */,
 				2D90974918360696004676EC /* WGS2Mars.m in Sources */,
+				2D19E68818925ADB00D0625E /* NSArray+additions.m in Sources */,
 				FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */,
 				FE13D4581829CCDD00EEE94E /* DVNetwork.m in Sources */,
 				FE285FD818367DFD00A67C7D /* DVReqResultVC.m in Sources */,

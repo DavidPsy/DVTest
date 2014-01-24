@@ -74,7 +74,7 @@
         _baseURL = baseURL;
         _paramsMap = [NSMutableDictionary dictionary];
         for (DVParam *tmpParam in paramsList) {
-            if (tmpParam.value && tmpParam.key) {
+            if (tmpParam.value.length > 0 && tmpParam.key.length > 0) {
                 
                 NSString *aValue = tmpParam.value;
                 
@@ -111,7 +111,7 @@
     NSDictionary *paramsDict = cacheDict[@"paramsMap"];
     NSString *tag = cacheDict[@"tag"];
     
-    if (!baseURL || !paramsDict || tag.length < 1) {
+    if (baseURL.length < 1 || !paramsDict || tag.length < 1) {
         return nil;
     }
     

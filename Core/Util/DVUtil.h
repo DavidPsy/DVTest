@@ -7,3 +7,4 @@
 //
 
 #import "NSString+regular.h"
+#import "NSArray+additions.h"

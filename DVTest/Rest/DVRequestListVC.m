@@ -73,10 +73,6 @@
 
 @end
 
-
-#pragma mark - tableview delegate
-
-
 #pragma mark - 
 
 @implementation RequestTableCell
