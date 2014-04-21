@@ -34,7 +34,6 @@
 		FE285FD718367DFD00A67C7D /* DVReqEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD018367DFD00A67C7D /* DVReqEditVC.m */; };
 		FE285FD818367DFD00A67C7D /* DVReqResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD218367DFD00A67C7D /* DVReqResultVC.m */; };
 		FE285FDA18367DFD00A67C7D /* DVRequestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE285FD618367DFD00A67C7D /* DVRequestListVC.m */; };
-		FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */; };
 		FE58217D1877C6B100AED0B9 /* NSString+regular.m in Sources */ = {isa = PBXBuildFile; fileRef = FE58217C1877C6B100AED0B9 /* NSString+regular.m */; };
 		FE5821821878074300AED0B9 /* Rest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE5821811878074300AED0B9 /* Rest.storyboard */; };
 		FE7955DE1847CA0100BB4822 /* DVBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7955DD1847CA0100BB4822 /* DVBaseVC.m */; };
@@ -99,7 +98,6 @@
 		FE285FD218367DFD00A67C7D /* DVReqResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVReqResultVC.m; sourceTree = "<group>"; };
 		FE285FD518367DFD00A67C7D /* DVRequestListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVRequestListVC.h; sourceTree = "<group>"; };
 		FE285FD618367DFD00A67C7D /* DVRequestListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVRequestListVC.m; sourceTree = "<group>"; };
-		FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = xiaoqi.jpg; sourceTree = "<group>"; };
 		FE58217B1877C6B100AED0B9 /* NSString+regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+regular.h"; sourceTree = "<group>"; };
 		FE58217C1877C6B100AED0B9 /* NSString+regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+regular.m"; sourceTree = "<group>"; };
 		FE58217E1877C99700AED0B9 /* DVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVUtil.h; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		2D50679417F17BF9000D4BAE = {
 			isa = PBXGroup;
 			children = (
-				FE56C6F41880F99900A5DB10 /* xiaoqi.jpg */,
 				FEF59DE81844BDA3007CA28D /* DEVSteps */,
 				2D51140F1804F7C8002E96C4 /* README */,
 				FE13D4551829CC7700EEE94E /* ThirdParty */,
@@ -374,11 +371,11 @@
 		2D50679517F17BF9000D4BAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = psy;
 				TargetAttributes = {
 					2D50679C17F17BF9000D4BAE = {
-						DevelopmentTeam = T3ZLXP4K5B;
+						DevelopmentTeam = MBC53M96A3;
 						SystemCapabilities = {
 							com.apple.DataProtection = {
 								enabled = 0;
@@ -417,7 +414,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5067AB17F17BF9000D4BAE /* InfoPlist.strings in Resources */,
-				FE56C6F51880F99900A5DB10 /* xiaoqi.jpg in Resources */,
 				2D5114101804F7C8002E96C4 /* README in Resources */,
 				2D5067B317F17BF9000D4BAE /* Default.png in Resources */,
 				FEF59DE91844BDA3007CA28D /* DEVSteps in Resources */,
@@ -557,7 +553,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -581,7 +577,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -619,7 +615,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1B485C97-0B3E-48C3-B30B-2B63ECC7871C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -655,7 +651,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "1B485C97-0B3E-48C3-B30B-2B63ECC7871C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -663,7 +659,6 @@
 		2D90975F18362267004676EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DVTest.app/DVTest";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -695,7 +690,6 @@
 		2D90976018362267004676EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DVTest.app/DVTest";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;

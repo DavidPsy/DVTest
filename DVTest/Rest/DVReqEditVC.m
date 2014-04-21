@@ -86,6 +86,14 @@
 #pragma mark -
 
 - (IBAction)onCreate {
+    if (self.baseURLTextfield.text.length < 5) {
+        DVAlert(@"please input base url");
+    }
+    
+    if ([self.tagTextfield.text length] < 1) {
+        DVAlert(@"please input a tag");
+    }
+    
     
     for (int i=0; i<[self.paramsListView numberOfRowsInSection:0]; i++) {
         ParamTableCell *cell = (ParamTableCell*)[self.paramsListView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];

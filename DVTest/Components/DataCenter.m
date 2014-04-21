@@ -65,7 +65,7 @@
 @implementation DVRequest
 
 - (id)initWithURL:(NSString*)baseURL paramsList:(NSArray*)paramsList tag:(NSString*)tag{
-    if (!baseURL || !paramsList || paramsList.count==0 || tag.length < 1) {
+    if (!baseURL || tag.length < 1) {
         return nil;
     }
     
@@ -133,57 +133,12 @@
 
 - (void)run:(void (^)(NSDictionary* result,NSError *error)) finished {
     
-//    {
-//    name: "方世玉",
-//    tag: 1,
-//    content: "明天去西雅图夜未眠",
-//    createUserId: "11",
-//    joinUsersId: "222",
-//    tag: "1",
-//    lat: "32.41",
-//    lng: "143.44",
-//    address:"北三环",
-//    startTime: "1386730800000",
-//    headPic: ""
-//    },
-    
-    UIImage *image = [UIImage imageNamed:@"xiaoqi.jpg"];
-    NSData *imageData = UIImagePNGRepresentation(image);
-    
-    NSString *tmpURL = @"http://192.168.1.104:9080/bird/image/upload";
-    [[DVNetwork netClient] POST:tmpURL parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:imageData name:@"photo" fileName:@"psy.png" mimeType:@"image/png"];
-        NSLog(@"[pushCertificate] pushCertificate Image, uploading... ");
-    } success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"success");
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"fail");
-    }];
-    
-    return;
-    
-    NSDictionary *params = @{@"name": @"盘世玉",
-                             @"tag":@(1),
-                             @"content":@"明天去西雅图夜未眠",
-                             @"createUserId":@"1111",
-                             @"startTime":@(1386730800000)};
-    
-    
-    
-    [[DVNetwork netClient] POST:@"createNew" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[DVNetwork netClient]GET:self.baseURL parameters:self.paramsMap success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",[responseObject description]);
         finished(responseObject,nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"%@",[error description]);
         finished(nil,error);
     }];
-    
-//    [[DVNetwork netClient]GET:self.baseURL parameters:self.paramsMap success:^(NSURLSessionDataTask *task, id responseObject) {
-//        NSLog(@"%@",[responseObject description]);
-//        finished(responseObject,nil);
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        finished(nil,error);
-//    }];
 }
 
 @end
